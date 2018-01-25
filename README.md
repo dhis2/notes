@@ -19,8 +19,8 @@ We use Slack to collaborate and talk to each other when at the keyboard. Feel fr
 
 # Documentation
 
-Every app has its own README which should include most info you need. We
-also have an online resource for documentation on http://dhis2.github.io.
+Every app has its own README which should include most info you need. There is also a wealth of information in 
+the online documentation:
 
 - [https://dhis2.github.io/](https://dhis2.github.io/)
 - [https://www.dhis2.org/development](https://www.dhis2.org/development)
