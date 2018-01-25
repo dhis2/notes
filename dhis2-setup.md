@@ -1,3 +1,7 @@
+# Mac OSX
+
+TBD
+
 # Linux (Debian 9)
 
 | symbol | meaning |
