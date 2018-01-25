@@ -3,6 +3,10 @@
 Every app has its own README which should include most info you need. We
 also have an online resource for documentation on dhis2.github.io.
 
+# HOWTO setup DHIS2
+
+- [DHIS2 Setup instructions](dhis2-setup.md)
+
 ## Links
 
 - [https://dhis2.github.io/](https://dhis2.github.io/)
