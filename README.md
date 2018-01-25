@@ -138,6 +138,7 @@ pushing the resulting tag to the Github repo.
 ```
 $ yarn version
 % <major.minor.patch>
+$ git push
 $ git push --tags
 ```
 
