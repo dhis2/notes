@@ -64,6 +64,10 @@ just as a plain-old-java with tomcat or jetty combo.
 
 ## Create your `DHIS2_HOME`
 
+Frontend apps (e.g. D2) read their configuration from this folder to get the URL
+to your DHIS2 instance and uses basic auth with a base64 encoded username/password
+in the format of `user:pass`. The example below is the base64 encode of `admin:district`.
+
 ```sh
 $ mkdir ~/.dhis2
 $ export DHIS2_HOME=~/.dhis2
