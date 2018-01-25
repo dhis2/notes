@@ -1,6 +1,67 @@
 # Mac OSX
 
-TBD
+* Fork [dhis2-core](https://github.com/dhis2/dhis2-core) and git clone it to your machine
+
+* Use branch **master**
+
+* Install Postgres (i.e. using homebrew `brew install postgres`)
+
+* Install jdk 8, [get it here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
+
+* Set your JAVA_HOME to jdk 8 (9 will not work), i.e. add the following line to your ~/.profile:
+    ```shell
+    export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/Current/commands/java_home`
+    ```
+
+* Install apache-tomcat (i.e. using homebrew `brew install tomcat`)
+
+* Install Maven (i.e. using homebrew `brew install maven`)
+
+* Generate DHIS2 War:
+
+    * At source code go to dhis-2 folder and execute `mvn -Dmaven.test.failure.ignore=true clean install`
+
+    * Go to dhis-2/dhis-web and execute `mvn -Dmaven.test.failure.ignore=true clean install`
+
+    * A dhis.war file will be generated at dhis-2/dhis-web/dhis-web-portal/target. Copy this file.
+
+* Go to your to your Tomcat webapps folder and paste the generated dhis.war file 
+
+* [OPTIONAL] Go to your Tomcat conf folder and update the tomcat-users.xml file so that you have a user that has access to the web manager which can start and stop the app. Add the lines below before the end of the XML file:
+    ```xml
+    <role rolename="manager-gui"/>
+    <user username="tomcat" password="tomcat" roles="manager-gui"/>
+    ```
+* At your Tomcat bin folder create a setenv&#46;sh file where you define DHIS2_HOME environment variable which will be pointing for needed configurations (for example): `export DHIS2_HOME=~/dhis2_home`
+
+* At your DHIS2_HOME you should place 1 file: dhis.conf (an example is shared below)
+
+* Create a Postgres Database with name, role and password and update dhis.conf accordingly (example assumes name, role and password to be **dhis**)
+
+* Import one of the databases shared at [dhis2-demo-db](https://github.com/dhis2/dhis2-demo-db). If this step is skipped a clean DHIS2 instance will installed and will work properly
+
+* Start your tomcat (e.g. `./startup.sh && tail -f ../logs/catalina.out`);
+
+* Go to [http://localhost:8080/dhis](http://localhost:8080/dhis) to visit your local instance of dhis2-core
+
+* [OPTIONAL] When you reboot, tomcat will not start automatically. If you want tomcat to start upon login, and you have installed it via homebrew, you can do `brew services start tomcat`
+
+* [OPTIONAL] If you want to locally work on front-end apps, make sure to add http://localhost:8081 to your CORS whitelist in the dhis-core app via `>apps>system_settings>access>cors_whitelist`
+
+### dhis.conf
+
+    # Hibernate SQL dialect
+    connection.dialect = org.hibernate.dialect.PostgreSQLDialect
+    # JDBC driver class
+    connection.driver_class = org.postgresql.Driver
+    # Database connection URL
+    connection.url = jdbc:postgresql://localhost/dhis
+    # Database username
+    connection.username = dhis
+    # Database password
+    connection.password = dhis
+    # Database schema behavior, can be validate, update, create, create-drop
+    connection.schema = update
 
 # Linux (Debian 9)
 
