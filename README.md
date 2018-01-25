@@ -93,7 +93,7 @@ standardise the way we interact with the DHIS2 instances.
 ## Code convention plugins
 
 - [eslint-config-dhis2](https://github.com/dhis2/eslint-config-dhis2)
-- editorconfig (per project)
+- [editorconfig](https://www.editorconfig.org) (per project)
 
 ## A new frontend app
 
