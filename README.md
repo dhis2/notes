@@ -59,7 +59,8 @@ to talk to. You can run this in
 [Docker](https://github.com/dhis2/dhis2-docker), VirtualBox, Vagrant, or
 just as a plain-old-java with tomcat or jetty combo.
 
-- [DHIS2 Setup instructions](dhis2-setup.md)
+- [Linux: DHIS2 Setup instructions](dhis2-setup.md#linux-debian-9)
+- [Mac OSX: DHIS2 Setup instructions](dhis2-setup.md#mac-osx)
 
 ## Shared libraries
 
