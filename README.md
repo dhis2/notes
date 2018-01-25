@@ -155,3 +155,5 @@ WAR-file in each release and shipped as the "core" application suite.
 This way of shipping core-apps is being phased out, but as of 2.29 it is
 still the primary way of shipping core applications.
 
+Refer to the documentation for the API on how to work with [apps inside of a DHIS2 context](https://docs.dhis2.org/master/en/developer/html/webapi_apps.html).
+
