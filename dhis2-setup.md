@@ -6,6 +6,7 @@
 | `$` | run command as user |
 | `%` | run command inside app |
 | ` ` | relevant output from cmd |
+| `--` | comment |
 
 ## Prepare the distro
 
@@ -19,6 +20,7 @@ Either `chmod` loose permissions to `/opt/dhis2` or `chown` it to the
 user you want.
 
 ## Setup Tomcat
+
 ```
 $ sudo apt install tomcat8
 $ sudo systemctl enable tomcat8
@@ -47,6 +49,7 @@ $ sudo -u postgres psql -d dhis2 -U dhis -f demo.sql
 ```
 
 ### Update 2.28 database to 2.29
+
 ```
 $ curl -o upgrade-229.sql https://raw.githubusercontent.com/dhis2/dhis2-utils/master/resources/sql/upgrade-229.sql
 $ sudo -u postgres psql -d dhis2 -U dhis -f upgrade-229.sql
@@ -67,11 +70,17 @@ $ vim /opt/dhis2/dhis.conf
 
 $ cd /opt/dhis2/dhis2-core/dhis-2
 $ mvn clean install
-$ cd dhis-web
-$ mvn clean install # builds the `dhis.war` under `dhis-web/dhis-web-portal/target`
-$ sudo cp /opt/dhis2/dhis2-core/dhis-2/dhis-web/dhis-web-portal/target/dhis.war /var/lib/tomcat8/webapps/ # this deploys dhis2 to tomcat
 
-$ sudo tail -f /var/log/tomcat8/catalina.out # monitor the deployment
+-- build the `dhis.war` under `dhis-web/dhis-web-portal/target` 
+$ cd dhis-web
+$ mvn clean install
+
+-- this deploys dhis2 to tomcat 
+$ sudo cp /opt/dhis2/dhis2-core/dhis-2/dhis-web/dhis-web-portal/target/dhis.war /var/lib/tomcat8/webapps/
+
+-- monitor the deployment
+$ sudo tail -f /var/log/tomcat8/catalina.out
+
 ...
 25-Jan-2018 10:29:22.161 INFO [localhost-startStop-3] org.apache.catalina.start
 up.HostConfig.deployWAR Deploying web application archive /var/lib/tomcat8/weba
@@ -81,7 +90,8 @@ pps/dhis.war
 up.HostConfig.deployWAR Deployment of web application archive /var/lib/tomcat8/
 webapps/dhis.war has finished in 83,809 ms
 
-$ curl -i -L http://localhost:8080/dhis # test that it works
+-- test that everything works
+$ curl -i -L http://localhost:8080/dhis
 
 HTTP/1.1 302
 Location: /dhis/
