@@ -62,6 +62,22 @@ just as a plain-old-java with tomcat or jetty combo.
 - [Linux: DHIS2 Setup instructions](dhis2-setup.md#linux-debian-9)
 - [Mac OSX: DHIS2 Setup instructions](dhis2-setup.md#mac-osx)
 
+## Create your `DHIS2_HOME`
+
+```sh
+$ mkdir ~/.dhis2
+$ export DHIS2_HOME=~/.dhis2
+```
+
+Create the file `$DHIS2_HOME/config.json` and add the following:
+
+```json
+{
+    "baseUrl": "http://localhost:8080/dhis",
+    "authorization": "Basic YWRtaW46ZGlzdHJpY3Q="
+}
+```
+
 ## Shared libraries
 
 We have a set of shared libraries which should be used in webapps to
