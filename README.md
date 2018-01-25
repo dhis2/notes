@@ -22,8 +22,8 @@ We use Slack to collaborate and talk to each other when at the keyboard. Feel fr
 Every app has its own README which should include most info you need. There is also a wealth of information in 
 the online documentation:
 
-- [https://dhis2.github.io/](https://dhis2.github.io/)
-- [https://www.dhis2.org/development](https://www.dhis2.org/development)
+- [DHIS2 Frontend docs](https://dhis2.github.io/)
+- [DHIS2 General development docs](https://www.dhis2.org/development)
 - [DHIS2 Web API docs](https://docs.dhis2.org/master/en/developer/html/webapi.html)
 
 ## Automatic build systems
