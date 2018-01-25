@@ -9,6 +9,13 @@ following topics:
 - Where do we track issues?
 - What is our Way of Work?
 - How do I deploy... apps? libs? dhis2?
+- Where do I get help from an actual human being?
+
+# Where is the team at?
+
+We use Slack to collaborate and talk to each other when at the keyboard. Feel free to talk to people AFK too. Some channels you should join are: **#frontend**, **#general**, **#announcements**, **#webapi**, **#devops**.
+
+- [Slack](https://dhis2.slack.com/)
 
 # Documentation
 
