@@ -1,15 +1,36 @@
+# Welcome!
+
+This quick intro document should help you get up to speed on the
+following topics:
+
+- Where do I find shared libraries?
+- Is there any documentation?
+- How do I set up DHIS2 for local development?
+- Where do we track issues?
+- What is our Way of Work?
+- How do I deploy... apps? libs? dhis2?
+
 # Documentation
 
 Every app has its own README which should include most info you need. We
-also have an online resource for documentation on dhis2.github.io.
-
-# HOWTO setup DHIS2
-
-- [DHIS2 Setup instructions](dhis2-setup.md)
-
-## Links
+also have an online resource for documentation on http://dhis2.github.io.
 
 - [https://dhis2.github.io/](https://dhis2.github.io/)
+- [https://www.dhis2.org/development](https://www.dhis2.org/development)
+- [DHIS2 Web API docs](https://docs.dhis2.org/master/en/developer/html/webapi.html)
+
+## Automatic build systems
+
+- [Travis](https://travis-ci.org/)
+- [Jenkins](https://ci.dhis2.org/)
+
+## Mailing lists
+
+There are two mailing lists which we use to interact with the DHIS2
+community world-wide.
+
+- [dhis2-users@lists.launchpad.net](https://lists.launchpad.net/dhis2-users/)
+- [dhis2-devs@lists.launchpad.net](https://lists.launchpad.net/dhis2-devs/)
 
 ## Issue tracking
 
@@ -22,7 +43,18 @@ also have an online resource for documentation on dhis2.github.io.
 - Every app has its own issue tracker on Github where technical issues
   are documented.
 
-# Shared libraries
+# Development
+
+## Setup DHIS2
+
+You will need an instance of DHIS2 running so your webapps have an API
+to talk to. You can run this in
+[Docker](https://github.com/dhis2/dhis2-docker), VirtualBox, Vagrant, or
+just as a plain-old-java with tomcat or jetty combo.
+
+- [DHIS2 Setup instructions](dhis2-setup.md)
+
+## Shared libraries
 
 We have a set of shared libraries which should be used in webapps to
 standardise the way we interact with the DHIS2 instances.
@@ -30,12 +62,12 @@ standardise the way we interact with the DHIS2 instances.
 - [d2](https://github.com/dhis2/d2)
 - [d2-ui](https://github.com/dhis2/d2-ui)
 
-# Code convention plugins
+## Code convention plugins
 
 - [eslint-config-dhis2](https://github.com/dhis2/eslint-config-dhis2)
 - editorconfig (per project)
 
-# A new frontend app
+## A new frontend app
 
 - Use [create-react-app](https://github.com/dhis2/eslint-config-dhis2)
   as a starting point
@@ -55,14 +87,34 @@ standardise the way we interact with the DHIS2 instances.
 8. a. some apps require that you deploy now
 8. b. for other apps you are done now
 
+## Versioning
+
+The basic principle is to follow semver (major.minor.patch).
+
+- Major is used to track against the DHIS2 version (e.g. 28 for DHIS2 version 2.28)
+- Minor for marking breaking changes
+- Patch is for fixes and patches
+
+**N.B. Check the README for the instructions for your specific app**
+
 ## Deployment
 
 There are multiple meanings to "deploy" within the DHIS2 ecosystem.
 
 ### to NPM
 
-On one hand, when talking about d2 and d2-ui a deployment means pushing
-a new version to NPM and a new tag to Github.
+On one hand, when talking about d2 and d2-ui a deployment means creating
+a tag based on the commit which bumps the version in `package.json`, and
+pushing the resulting tag to the Github repo.
+
+```
+$ yarn version
+% <major.minor.patch>
+$ git push --tags
+```
+
+When a tag is pushed to the repo, Travis will run a build and then
+publish the artifact to NPM.
 
 ### to DHIS2
 
@@ -74,14 +126,4 @@ WAR-file in each release and shipped as the "core" application suite.
 
 This way of shipping core-apps is being phased out, but as of 2.29 it is
 still the primary way of shipping core applications.
-
-## Versioning
-
-The basic principle is to follow semver (major.minor.patch).
-
-- Major is used to track against the DHIS2 version (e.g. 28 for DHIS2 version 2.28)
-- Minor for marking breaking changes
-- Patch is for fixes and patches
-
-**N.B. Check the README for the instructions for your specific app**
 
