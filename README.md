@@ -79,10 +79,17 @@ standardise the way we interact with the DHIS2 instances.
 - [d2](https://github.com/dhis2/d2)
 - [d2-ui](https://github.com/dhis2/d2-ui)
 
-## Code convention plugins
+## Code convention
 
 - [eslint-config-dhis2](https://github.com/dhis2/eslint-config-dhis2)
 - [editorconfig](https://www.editorconfig.org) (per project)
+- [JSDoc](https://github.com/jsdoc3/jsdoc)
+    Minimum is a function description:
+    ```
+    /** This is a description for foo */
+    function foo() {}
+    ```
+    Note that jsdoc **only** scans comments that starts with two stars: `/**`
 
 ## A new frontend app
 
