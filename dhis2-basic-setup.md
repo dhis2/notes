@@ -1,3 +1,6 @@
+# Install the software
+
+## Legend
 | symbol | meaning |
 | --- | --- |
 | `#` | run command as root |
@@ -6,8 +9,6 @@
 | `--` | comment |
 | ` ` | relevant output from cmd |
 | `...` | truncated output |
-
-# Install the software
 
 ## You will need
 
