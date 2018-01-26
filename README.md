@@ -15,6 +15,8 @@ following topics:
 
 We use Slack to collaborate and talk to each other when at the keyboard. Feel free to talk to people AFK too. Some channels you should join are: **#frontend**, **#general**, **#announcements**, **#webapi**, **#devops**.
 
+Use your @dhis.org e-mail to sign up.
+
 - [Slack](https://dhis2.slack.com/)
 
 # Documentation
@@ -61,26 +63,6 @@ just as a plain-old-java with tomcat or jetty combo.
 
 - [Linux: DHIS2 Setup instructions](dhis2-setup.md#linux-debian-9)
 - [Mac OSX: DHIS2 Setup instructions](dhis2-setup.md#mac-osx)
-
-## Create your `DHIS2_HOME`
-
-Frontend apps (e.g. D2) read their configuration from this folder to get the URL
-to your DHIS2 instance and uses basic auth with a base64 encoded username/password
-in the format of `user:pass`. The example below is the base64 encode of `admin:district`.
-
-```sh
-$ mkdir ~/.dhis2
-$ export DHIS2_HOME=~/.dhis2
-```
-
-Create the file `$DHIS2_HOME/config.json` and add the following:
-
-```json
-{
-    "baseUrl": "http://localhost:8080/dhis",
-    "authorization": "Basic YWRtaW46ZGlzdHJpY3Q="
-}
-```
 
 ## Shared libraries
 
