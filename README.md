@@ -25,8 +25,9 @@ Every app has its own README which should include most info you need. There is a
 the online documentation:
 
 - [DHIS2 Frontend docs](https://dhis2.github.io/)
-- [DHIS2 General development docs](https://www.dhis2.org/development)
 - [DHIS2 Web API docs](https://docs.dhis2.org/master/en/developer/html/webapi.html)
+- [DHIS2 User/Implementer/Developer/End user Documentation](https://www.dhis2.org/documentation)
+- [DHIS2 Development docs](https://www.dhis2.org/development)
 
 ## Automatic build systems
 
@@ -63,6 +64,13 @@ just as a plain-old-java with tomcat or jetty combo.
 
 - [Linux: DHIS2 Setup instructions](dhis2-setup.md#linux-debian-9)
 - [Mac OSX: DHIS2 Setup instructions](dhis2-setup.md#mac-osx)
+
+## Whitelist your local frontend apps in DHIS2 settings
+
+If you want to locally work on front-end apps, make sure to add `http://localhost:8081` (*without a trailing slash!*)
+to your CORS whitelist in the [DHIS2 settings app](http://localhost:8080/dhis/dhis-web-settings/#/access) via: 
+
+`> apps> system_settings> access> cors_whitelist`
 
 ## Shared libraries
 
