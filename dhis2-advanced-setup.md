@@ -1,5 +1,5 @@
 # DHIS2 Advanced setup
-In most cases, the [basic setup guide](dhis2-setup.md) for DHIS2 is all you need. But some cases requires you to have different versions and databases, and in this guide we will point out how you can do just that.
+In most cases, the [basic setup guide](dhis2-basic-setup.md) for DHIS2 is all you need. But some cases requires you to have different versions and databases, and in this guide we will point out how you can do just that.
 
 ## DHIS2 versions
 There are two different ways to get a specific version of DHIS2 (omitting tools like docker):
