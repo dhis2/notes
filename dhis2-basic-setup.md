@@ -185,6 +185,15 @@ Using CATALINA_HOME:   /usr/share/tomcat8
 ...
 ```
 
+## Running Tomcat as another user
+
+If you plan on running Tomcat as a different user, you need to use `$CATALINA_BASE/bin/setenv.sh` to set the `DHIS2_HOME` variable.
+
+```sh
+$ echo "export DHIS2_HOME=/path/to/dhis2/home" >> $CATALINA_BASE/bin/setenv.sh
+$ chmod +x $CATALINA_BASE/bin/setenv.sh
+```
+
 ## Access the Tomcat Manager GUI
 
 You need to give a user access to the web manager which can start and stop the app.
