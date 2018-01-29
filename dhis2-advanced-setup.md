@@ -34,7 +34,9 @@ With Jetty, you can only run a single instance at the time. To switch between ve
 
 Tomcat takes some time to set up properly, but also has the possibility to run multiple different versions of DHIS2 in parallel with their own databases. Since setting up Tomcat is covered in the basic setup guide, I will point out the steps to setting up multiple instances with multiple databases here.
 
-The following steps is required for each instance you want to run:
+More detailed information about how to setup multiple instances of Tomcat is available [in the implementer docs](https://docs.dhis2.org/master/en/implementer/html/install_server_setup.html#install_tomcat_dhis2_installation).
+
+An outline of the steps required for each instance you want to run:
 
 1. Aquire a WAR file of the DHIS2 version you want to run
 2. Create a new folder on your system, which will be the `DHIS2_HOME` folder of the new instance. (This folder cannot be shared by instances you want to have a different configuration)
