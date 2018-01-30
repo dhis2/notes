@@ -61,7 +61,7 @@ $ sudo usermod --append --groups www-data tomcat8
 $ sudo usermod --gid www-data tomcat8
 ```
 
-`/etc/nginx/sites-available;/dhis2.vardevs.se.conf`:
+`/etc/nginx/sites-available/dhis2.vardevs.se.conf`:
 ```nginx
 server {
         listen 80;
