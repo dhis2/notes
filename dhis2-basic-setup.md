@@ -85,7 +85,7 @@ Create the file `$DHIS2_HOME/config.json` and add the following:
 ```properties
 connection.dialect = org.hibernate.dialect.PostgreSQLDialect
 connection.driver_class = org.postgresql.Driver
-connection.url = jdbc:postgresql://localhost/dhis
+connection.url = jdbc:postgresql://localhost/dhis2
 connection.username = dhis
 connection.password = dhis
 # Database schema behavior, can be validate, update, create, create-drop
