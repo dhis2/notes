@@ -21,7 +21,7 @@ Use your @dhis.org e-mail to sign up.
 
 # Documentation
 
-Every app has its own README which should include most info you need. There is also a wealth of information in 
+Every app has its own README which should include most info you need. There is also a wealth of information in
 the online documentation:
 
 - [DHIS2 Frontend docs](https://dhis2.github.io/)
@@ -67,7 +67,7 @@ just as a plain-old-java with tomcat or jetty combo.
 ## Whitelist your local frontend apps in DHIS2 settings
 
 If you want to locally work on front-end apps, make sure to add `http://localhost:8081` (*without a trailing slash!*)
-to your CORS whitelist in the [DHIS2 settings app](http://localhost:8080/dhis/dhis-web-settings/#/access) via: 
+to your CORS whitelist in the [DHIS2 settings app](http://localhost:8080/dhis/dhis-web-settings/#/access) via:
 
 `> apps> system_settings> access> cors_whitelist`
 
@@ -79,8 +79,9 @@ standardise the way we interact with the DHIS2 instances.
 - [d2](https://github.com/dhis2/d2)
 - [d2-ui](https://github.com/dhis2/d2-ui)
 
-## Code convention
+## Code and repository convention
 
+- [Repository guidelines](GUIDELINES.md)
 - [eslint-config-dhis2](https://github.com/dhis2/eslint-config-dhis2)
 - [editorconfig](https://www.editorconfig.org) (per project)
 - [JSDoc](https://github.com/jsdoc3/jsdoc)
