@@ -64,6 +64,21 @@ just as a plain-old-java with tomcat or jetty combo.
 
 - [DHIS2 Setup instructions](dhis2-basic-setup.md)
 
+## Setup DHIS (using Ansible)
+[dhis core setup](https://github.com/adeelshahid/dhis2-core-ansible) It has been tested on Mac with Ubuntu 16. If you find any problems with it please report or send me a PR to fix. 
+
+Download one of the demo database file from [dhis2-demo-db](https://github.com/dhis2/dhis2-demo-db), extract it and rename it demo.sql. Put demo.sql inside dhis-core-server before running vagrant up.
+
+```bash
+$> git clone https://github.com/adeelshahid/dhis2-core-ansible.git dhis-core-server
+$> cd dhis-core-server
+# download a demo database and name it demo.sql
+$> vagrant up
+```
+
+When vagrant finishes you can access dhis on [http://192.168.22.11:8080/dhis/](http://192.168.22.11:8080/dhis/),
+**username:** admin, **password:** district
+
 ## Whitelist your local frontend apps in DHIS2 settings
 
 If you want to locally work on front-end apps, make sure to add `http://localhost:8081` (*without a trailing slash!*)
