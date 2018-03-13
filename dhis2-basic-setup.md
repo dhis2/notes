@@ -41,6 +41,7 @@ export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/Current/c
 ## Debian 9
 
 ```sh
+sudo apt update
 sudo apt install maven openjdk-8 openjdk-8-jre git curl unzip postgresql-9.6 tomcat8
 
 -- enable some services to autostart, and start them
