@@ -95,10 +95,12 @@ In general the happy case flow is:
 
 1. Open
 2. Todo
-3. In progress
-4. In review
+3. **In progress**
+4. **In review**
 5. Testing
 6. Done
+
+The parts of the flow in bold are the states we are responsible for doing work in. We take "todo" issues and transition them to "in progess". Here we do work. We then transition them to "in review" where we also do work to verify that they are good enough (according to our **Definition of Done**). When we are confident we move it to "testing" and it is out of our hands (in theory).
 
 There are some criteria for actions before transitioning an issue along the
 pipeline.
