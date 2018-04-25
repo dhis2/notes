@@ -21,7 +21,7 @@ why the quality of the content is important to our process.
 
 # Hard and fast rules
 
-1. Information related to the issue belongs in the issue
+1. _Information related to the issue belongs in the issue_
 
 *Slack* is great for discussions but it *is* a walled garden that holds the
 history of those discussions hostage unless you pay up for a commercial
@@ -46,13 +46,16 @@ her features do not grind to a halt if the information is in the JIRA ticket,
 and since we work on a prioritised backlog, whatever she was working on is
 important to complete.
 
-2. Transparency is a good thing for everyone
+2. _Transparency is a good thing for everyone_
 
 JIRA is our tool for showing all interested parties from implementors, donors,
 product managers, internal and external developers, what we are doing, when we
 are doing it, and why we are doing it.
 
-3. The status in JIRA should reflect the truth
+**We are an open-source project, so hiding our inner workings behind closed doors
+is detrimental to the values of open-source software.**
+
+3. _The status in JIRA should reflect the truth_
 
 This should be obvious, but we do not assign issue to ourselves we aren't
 actively working on. It's more important that JIRA reflects the truth than to
@@ -61,7 +64,7 @@ your team leader or product manager. There is no reason to assign issues to
 yourself or set them to in progress unless they are actively worked on, it just
 stops someone else from starting on those issues.
 
-It's better to set the issue to unassigned than to look busy.
+**It's better to set an issue to unassigned than to look busy.**
 
 # Statuses and what they mean
 
