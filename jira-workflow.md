@@ -105,18 +105,18 @@ pipeline.
 
 ### Open
 
-* * Product manager prioritises
+* Product manager prioritises
 
 ### Todo
 
-* * Part of backlog
-* * Plan for milestone
-* * [Evaluate issue completeness](#is-an-issue-ready-to-be-worked-on)
+* Part of backlog
+* Plan for milestone
+* [Evaluate issue completeness](#is-an-issue-ready-to-be-worked-on)
 
 ### In progress
 
-* * Assign to self
-* * Work has started
+* Assign to self
+* Work has started
 
 ### In review
 
