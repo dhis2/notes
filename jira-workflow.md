@@ -86,8 +86,10 @@ stops someone else from starting on those issues.
 
 * **Done**: issue has passed QA tests and is closed and ready for release.
 
-* **Re-opened**: issue fails some QA tests, which might be lack of test case,
+* **Needs update**: issue fails some QA tests, which might be lack of test case,
   documentation, or something else.
+  
+* **Re-opened**: issues that were at one point considered closed and done, but no longer are.
 
 # Workflow
 
@@ -133,9 +135,13 @@ pipeline.
 * Picked up by testers automatically, they assign it to themselves when testing
   starts
 
-### Re-opened
+### Needs update
 
 * Happens when QA fails
+
+### Re-opened
+
+* Happens when there is a regression in relation to the issue
 
 # Review checklist
 
