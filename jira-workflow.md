@@ -21,7 +21,7 @@ why the quality of the content is important to our process.
 
 # Hard and fast rules
 
-1. Information related to the issue belongs in the issue
+1. _Information related to the issue belongs in the issue_
 
 *Slack* is great for discussions but it *is* a walled garden that holds the
 history of those discussions hostage unless you pay up for a commercial
@@ -46,13 +46,16 @@ her features do not grind to a halt if the information is in the JIRA ticket,
 and since we work on a prioritised backlog, whatever she was working on is
 important to complete.
 
-2. Transparency is a good thing for everyone
+2. _Transparency is a good thing for everyone_
 
 JIRA is our tool for showing all interested parties from implementors, donors,
 product managers, internal and external developers, what we are doing, when we
 are doing it, and why we are doing it.
 
-3. The status in JIRA should reflect the truth
+**We are an open-source project, so hiding our inner workings behind closed doors
+is detrimental to the values of open-source software.**
+
+3. _The status in JIRA should reflect the truth_
 
 This should be obvious, but we do not assign issue to ourselves we aren't
 actively working on. It's more important that JIRA reflects the truth than to
@@ -61,7 +64,7 @@ your team leader or product manager. There is no reason to assign issues to
 yourself or set them to in progress unless they are actively worked on, it just
 stops someone else from starting on those issues.
 
-It's better to set the issue to unassigned than to look busy.
+**It's better to set an issue to unassigned than to look busy.**
 
 # Statuses and what they mean
 
@@ -83,8 +86,10 @@ It's better to set the issue to unassigned than to look busy.
 
 * **Done**: issue has passed QA tests and is closed and ready for release.
 
-* **Re-opened**: issue fails some QA tests, which might be lack of test case,
+* **Needs update**: issue fails some QA tests, which might be lack of test case,
   documentation, or something else.
+  
+* **Re-opened**: issues that were at one point considered closed and done, but no longer are.
 
 # Workflow
 
@@ -92,28 +97,30 @@ In general the happy case flow is:
 
 1. Open
 2. Todo
-3. In progress
-4. In review
+3. **In progress**
+4. **In review**
 5. Testing
 6. Done
+
+The parts of the flow in bold are the states we are responsible for doing work in. We take "todo" issues and transition them to "in progess". Here we do work. We then transition them to "in review" where we also do work to verify that they are good enough (according to our **Definition of Done**). When we are confident we move it to "testing" and it is out of our hands (in theory).
 
 There are some criteria for actions before transitioning an issue along the
 pipeline.
 
 ### Open
 
-* * Product manager prioritises
+* Product manager prioritises
 
 ### Todo
 
-* * Part of backlog
-* * Plan for milestone
-* * [Evaluate issue completeness](#is-an-issue-ready-to-be-worked-on)
+* Part of backlog
+* Plan for milestone
+* [Evaluate issue completeness](#is-an-issue-ready-to-be-worked-on)
 
 ### In progress
 
-* * Assign to self
-* * Work has started
+* Assign to self
+* Work has started
 
 ### In review
 
@@ -128,9 +135,13 @@ pipeline.
 * Picked up by testers automatically, they assign it to themselves when testing
   starts
 
-### Re-opened
+### Needs update
 
 * Happens when QA fails
+
+### Re-opened
+
+* Happens when there is a regression in relation to the issue
 
 # Review checklist
 
