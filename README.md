@@ -91,14 +91,15 @@ to your CORS whitelist in the [DHIS2 settings app](http://localhost:8080/dhis/dh
 We have a set of shared libraries which should be used in webapps to
 standardise the way we interact with the DHIS2 instances.
 
+- [code-style](https://github.com/dhis2/code-style)
 - [d2](https://github.com/dhis2/d2)
 - [d2-ui](https://github.com/dhis2/d2-ui)
+- [d2-i18n](https://github.com/dhis2/d2-i18n)
+- [ui](https://github.com/dhis2/ui)
 
 ## Code and repository convention
 
 - [Repository guidelines](GUIDELINES.md)
-- [eslint-config-dhis2](https://github.com/dhis2/eslint-config-dhis2)
-- [editorconfig](https://www.editorconfig.org) (per project)
 - [JSDoc](https://github.com/jsdoc3/jsdoc)
     Minimum is a function description:
     ```
@@ -109,8 +110,7 @@ standardise the way we interact with the DHIS2 instances.
 
 ## A new frontend app
 
-- Use [create-react-app](https://github.com/dhis2/eslint-config-dhis2)
-  as a starting point
+- [Web application guidelines](webapp-guidelines.md)
 
 # Way of Work
 
