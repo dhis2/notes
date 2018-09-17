@@ -15,7 +15,7 @@ We use:
 - [code-style](https://github.com/dhis2/code-style) to ensure
   that we have code formatted in an uniform way.
 
-- [build-deploy](https://github.com/dhis2/build-deploy) to deploy
+- [deploy-build](https://github.com/dhis2/deploy-build) to deploy
   per-commit builds to a GitHub repo, which can be installed using
   NPM/Yarn.
 
