@@ -17,6 +17,7 @@
 - PostgreSQL 9.6.5
 - Git 2.7
 - Maven 3.5
+- npm
 
 ## Mac OSX
 
@@ -26,6 +27,7 @@ You will need [Homebrew](https://brew.sh/).
 brew install postgres
 brew install tomcat
 brew install maven
+brew install node
 ```
 
 ### Install Java for Mac OSX manually
@@ -42,7 +44,7 @@ export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/Current/c
 
 ```sh
 sudo apt update
-sudo apt install maven openjdk-8 openjdk-8-jre git curl unzip postgresql-9.6 tomcat8
+sudo apt install maven openjdk-8 openjdk-8-jre git curl unzip postgresql-9.6 tomcat8 npm
 
 -- enable some services to autostart, and start them
 $ sudo systemctl enable postgresql@9.6-main.service
