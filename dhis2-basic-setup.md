@@ -105,7 +105,7 @@ This example assumes name, role and password to be **dhis**.
 
 ```sh
 $ sudo -u postgres psql
-% create user 'dhis' with password 'dhis';
+% create user dhis with password 'dhis';
 % create database "dhis2";
 % grant all privileges on database "dhis2" to dhis;
 % \q
