@@ -22,12 +22,13 @@ We use:
 - [d2-i18n](https://github.com/dhis2/d2-i18n) for internationalisation
   of our applications.
 
+- Yarn for normal operation, NPM for scripts.
+
+## Mono repos
+
 - [packages](https://github.com/dhis2/packages) to manage our packages
   for local development (lerna alternative).
 
-- Yarn for normal operation, NPM for scripts.
-
 ## UI
 
-- Old: [d2-ui](https://github.com/dhis2/d2-ui)
-- New: [ui](https://github.com/dhis2/ui)
+- [d2-ui](https://github.com/dhis2/d2-ui)
