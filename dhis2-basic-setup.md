@@ -60,6 +60,24 @@ $ sudo chown dhis:tomcat8 /path/to/dhis2
 $ sudo chmod -R 775 /path/to/dhis2
 ```
 
+## Ubuntu 18.04 Bionic Beaver (with PostgreSQL 10)
+
+```sh
+sudo apt update
+sudo apt install maven openjdk-8-jdk unzip postgresql-10 postgresql-10-postgis-2.4 tomcat8
+
+$ sudo systemctl enable postgresql@10-main.service
+$ sudo systemctl start postgresql@10-main.service
+
+-- add a dhis user and create dhis2 folders
+-- useful if you are setting up dhis2 on a server
+$ sudo adduser dhis
+$ mkdir /path/to/dhis2
+
+$ sudo chown dhis:tomcat8 /path/to/dhis2
+$ sudo chmod -R 775 /path/to/dhis2
+```
+
 # Create your `DHIS2_HOME` environment variable
 
 Applications (e.g. DHIS2, D2) read their configuration from this folder.
@@ -108,21 +126,30 @@ $ sudo -u postgres psql
 % create user dhis with password 'dhis';
 % create database "dhis2";
 % grant all privileges on database "dhis2" to dhis;
+% \c dhis2;
+% CREATE EXTENSION postgis;
+% CREATE EXTENSION postgis_topology;
 % \q
 ```
 
 ### Load demo data into database
 
-Import one of the databases shared at [dhis2-demo-db](https://github.com/dhis2/dhis2-demo-db). 
+Import one of the databases (preferably Sierra Leone which is most up to date) shared at [dhis2-demo-db](https://github.com/dhis2/dhis2-demo-db). 
 
 If this step is skipped a clean DHIS2 instance will installed and will work properly, the default login for a fresh instance is `admin:district`.
 
 #### Linux e.g.
 
 ```sh
-$ curl -o dhis2-demo.zip https://www.dhis2.org/download/resources/2.28/dhis2-demo.zip
+$ curl -Lo dhis2-demo.sql.gz https://github.com/dhis2/dhis2-demo-db/blob/master/sierra-leone/dev/dhis2-db-sierra-leone.sql.gz?raw=true
 $ unzip dhis2-demo.zip
-$ sudo -u postgres psql -d dhis2 -U dhis -f demo.sql
+$ sudo -u postgres psql -d dhis2 -U dhis -f dhis2-demo.sql
+
+-- if you get Peer authentication failed for user "dhis" when trying the last step when importing the database you have to do the following steps
+$ sudo nano /etc/postgresql/10/main/pg_hba.conf
+-- search for "peer" and change to md5, save the file and restart postgres
+$ sudo /etc/init.d/postgresql restart
+-- now you can try to import the database again.
 ```
 
 ### Update 2.28 database to 2.29
