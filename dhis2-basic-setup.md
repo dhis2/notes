@@ -141,12 +141,6 @@ If this step is skipped a clean DHIS2 instance will installed and will work prop
 $ curl -Lo dhis2-demo.sql.gz https://github.com/dhis2/dhis2-demo-db/blob/master/sierra-leone/dev/dhis2-db-sierra-leone.sql.gz?raw=true
 $ unzip dhis2-demo.zip
 $ sudo -u postgres psql -d dhis2 -f dhis2-demo.sql
-
--- if you get Peer authentication failed for user when trying the last step when importing the database you have to do the following steps
-$ sudo nano /etc/postgresql/VERSION/main/pg_hba.conf
--- search for "peer" and change to md5, save the file and restart postgres
-$ sudo /etc/init.d/postgresql restart
--- now you can try to import the database again.
 ```
 
 ### Update 2.28 database to 2.29
