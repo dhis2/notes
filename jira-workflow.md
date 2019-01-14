@@ -143,6 +143,56 @@ pipeline.
 
 * Happens when there is a regression in relation to the issue
 
+# Detailed workflow for developers
+
+This section covers only the steps that are relevant to the developers.
+
+## Test failure tickets
+
+It's generally a good idea to have a look at the issues that returned to the 
+todo list because the tests failed during QA. Although normally the dev
+who initially worked on that ticket should fix the open issues,
+this is not always possible.
+
+If you see one of your tickets pop up again and you know that you'll be able 
+to work on that one soon anyways, you can assign it to yourself.
+If you're working on an issue with a tight deadline and you can't stop
+working on that issue, but the ticket that came back from QA is very important,
+you can just ask the other devs if they can have a look, ideally with a possible
+hint what they might have to do.
+
+Sometimes devs are on leave and won't be able to fix the open issues,
+so you could just take over and do it yourself.
+
+## Todo
+
+__Before starting to work on a ticket, you might want to read through the
+"Git workflow for core devs" guide!__<br>
+
+Once you're done working on an issue, push your changes to the repository
+and submit a pull request.
+Next you need to ask the core developers to review your changes, i. e.
+by asking in slack. Once your changes are approved, do the merge yourself.
+Then you need to update the documentation if necessary.
+Regardless of whether there was documentation to update or not,
+create a comment in the JIRA ticket to state what you updated 
+or why you didn't update anything.
+
+If you fixed a bug, you'll need to create a new test case.
+Create an issue of type "Test" and specify the required data.
+Keep in mind not to be too specific to make the test case capture
+all possible scenarios, i. e:
+You changed a password input field from showing plain text
+to show asterixes instead. Don't write 
+"the password field with the name XZY needs to be of type password".
+It's better to say sth like "password fields in the form ABCD should hide
+the characters behind asterixes".
+<br>
+Also link the actual JIRA issue to the newly created test case issue.
+
+Now you can ask again for a final review.
+If everything looks fine, you can then unassign youself and set the ticket to "In Review"
+
 # Review checklist
 
 ## Bugs
