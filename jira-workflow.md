@@ -169,7 +169,7 @@ so you could just take over and do it yourself.
 __Before starting to work on a ticket, you might want to read through the
 "Git workflow for core devs" guide!__<br>
 
-Once you're done working on an issue, push your changes to your own repository
+Once you're done working on an issue, push your changes to the repository
 and submit a pull request.
 Next you need to ask the core developers to review your changes, i. e.
 by asking in slack. Once your changes are approved, do the merge yourself.
@@ -190,7 +190,7 @@ the characters behind asterixes".
 <br>
 Also link the actual JIRA issue to the newly created test case issue.
 
-Now you can ask again for a review, but a final review in this case.
+Now you can ask again for a final review.
 If everything looks fine, you can then unassign youself and set the ticket to "In Review"
 
 # Review checklist

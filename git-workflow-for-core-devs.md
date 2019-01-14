@@ -7,7 +7,7 @@ There are a few downsides though if you're following that quick guide.
 As we're supporting the last three released versions, some issues will
 have older versions as a target.
 
-If you follow the cheat sheet, you workflow after finishing the issue
+If you follow the cheat sheet, your workflow after finishing the issue
 on the master branch might be: checkout the older version branch,
 cherry pick your changes and you're kind of done.
 [This might result in a lot of trouble](https://blogs.msdn.microsoft.com/oldnewthing/20180312-00/?p=98215)
@@ -80,11 +80,11 @@ that haven't been merged yet or will be needed again.
 
 Once you've merged your branch, you'll be given the option to delete
 your remote branch on github. Normally you should be able to just delete
-your branch, so do it. Otherwise please keep in mind that your branch is still on the remote
-repository, no one is going to delete that branch for you.
+your branch, so do it. Otherwise please keep in mind that your branch is still
+on the remote repository, no one is going to delete that branch for you.
 
-You should never work on a branch that has been merged again.
-If a ticket return because it didn't pass the review,
-create a new branch with the same ticket id and an updated description
-that reflects what you'll do on that branch. This means that you can also delete your local branches once you've
-merged your pull request.
+You should never work on a branch that has been merged already.
+If a ticket returned because didn't pass the review, create a new branch with
+the same ticket id and an updated description that reflects what you'll do on
+that branch. This means that you can also delete your local branches once
+you've merged your pull request.
