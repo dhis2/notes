@@ -1,4 +1,4 @@
-# Front End Discussion Board
+# Discussion Board
 
 ## Proposals / Discussion
 
