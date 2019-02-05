@@ -1,5 +1,11 @@
 # Discussion Board
 
+**NOTE: Way of Work information (`wow-frontend`) is being migrated to the [Developer Portal](dhis2.github.io)**
+
+Please raise an [issue](https://github.com/dhis2/dhis2.github.io/issues) there if something is missing
+
+This repository has been renamed to `notes` to serve the purpose of recording decissions and discussions over time.
+
 ## Proposals / Discussion
 
 Create an issue in GitHub, it can be discussed in the issue, and then a
