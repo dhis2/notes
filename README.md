@@ -4,7 +4,7 @@
 
 Please raise an [issue](https://github.com/dhis2/dhis2.github.io/issues) there if something is missing
 
-This repository has been renamed to `notes` to serve the purpose of recording decissions and discussions over time.
+This repository has been renamed to `notes` to serve the purpose of recording decisions and discussions over time.
 
 ## Proposals / Discussion
 
