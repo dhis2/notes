@@ -1,6 +1,6 @@
 # Discussion Board
 
-**NOTE: Way of Work information (`wow-frontend`) is being migrated to the [Developer Portal](dhis2.github.io)**
+**NOTE: Way of Work information (`wow-frontend`) is being migrated to the [Developer Portal](https://dhis2.github.io)**
 
 Please raise an [issue](https://github.com/dhis2/dhis2.github.io/issues) there if something is missing
 
