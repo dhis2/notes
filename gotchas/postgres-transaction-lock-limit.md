@@ -18,4 +18,4 @@ You will also see similar errors in the Core logs.  Note that the Tomcat server 
 
 ## Resolution
 
-To avoid this issue, the Postgress server must be restarted with the `max_locks_per_transaction` increased.  For instance, you can run `postgres -c max_locks_per_transaction=100` or set the same in the `./data/postgresql.conf` config file.  100 should be sufficient, though higher limits are possible.  Server memory use may increase when this setting is modified.
+To avoid this issue, the Postgress server must be restarted with the `max_locks_per_transaction` increased.  For instance, you can run `postgres -c max_locks_per_transaction=100` or set the same in the config file (i.e. `/etc/postgresql/9.1/main/postgresql.conf`).  100 should be sufficient, though higher limits are possible.  Server memory use may increase when this setting is modified.
