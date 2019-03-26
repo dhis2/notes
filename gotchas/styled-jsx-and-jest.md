@@ -18,7 +18,7 @@ const buttonStyle = css.resolve`button { color: green; }`;
 
 ### Mocking the `css` and `css.resolve` function
 
-Create a mock file in the project root, adjecent to the `node_modules` folder: `./__mocks__/styled-jsx/css.js`
+Create a mock file in the project root, adjacent to the `node_modules` folder: `./__mocks__/styled-jsx/css.js`
 
 ```javascript
 module.exports.__esModule = true;
@@ -58,6 +58,6 @@ css.resolve = function() {};
 module.exports = css;
 ```
 
-Now, this is quite irregular, but perfectly valid JavaScript, so it would be very logical to think that the mocked version could follow the same pattern. **However**, `jest` doesn't seem to have support for these type of functions. We haven't been able to get to the bottom of it, but we do know that trying to mock the function as above will just lead to `Cannot read propert "resolve" of undefined` errors in the tests.
+Now, this is quite irregular, but perfectly valid JavaScript, so it would be very logical to think that the mocked version could follow the same pattern. **However**, `jest` doesn't seem to have support for these type of functions. We haven't been able to get to the bottom of it, but we do know that trying to mock the function as above will just lead to `Cannot read property "resolve" of undefined` errors in the tests.
 
 By always calling the `resolve` function directly, and mocking the `css` function as in the recommended setup section, the above problem is circumvented.
