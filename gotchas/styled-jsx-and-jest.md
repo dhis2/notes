@@ -2,7 +2,7 @@
 
 ### Usage of `styled-jsx` `css` and `css.resolve` function
 
-In your code-base, make sure to call the `resolve` function directly, like so:
+In your code-base, make sure to import the `resolve` function from the named export, like so:
 
 ```javascript
 import { resolve } from 'styled-jsx/css';
