@@ -39,3 +39,16 @@ const setProperty(obj, key, value) => {
 }
 list.reduce((out, item) => setProperty(out, item.key, item.value), {})
 ```
+
+Or create some utility functions with more specific scope, and even shorter to write:
+```javascript
+const reduceToObject = (list, extractor) => (
+  list.reduce((accum, item) => {
+    const [key, value] = extractor(item)
+    accum[key] = value
+    return accum
+  }, {})
+)
+
+reduceToObject(list, ({ key, value }) => [key, value])
+```
