@@ -30,7 +30,7 @@ arr.reduce(
 The differences become more pronounced once the items length increases. At length 400 you there is a significant divergence between the two approaches. Hence the advice to only use the slower variant up to 100-200 items.
 
 
-## Fast and pretty
+## Fast and implicit
 By using a small utility function you could keep doing implicit returns _without the performance impact_.
 ```javascript
 const setProperty(obj, key, value) => {
