@@ -7,7 +7,7 @@
 
 ## Drop IE 11 support
 
-Starting from DHIS 2 version 2.33 we will drop support for IE 11. This implies that no version of IE are supported.
+Starting from DHIS 2 version 2.33 we will drop support for IE 11. This implies that no versions of IE are supported.
 
 From 2.33 we will fully support Edge.
 
