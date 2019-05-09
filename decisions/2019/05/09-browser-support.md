@@ -11,4 +11,4 @@ Starting from DHIS 2 version 2.33 we will drop support for IE 11. This implies t
 
 From 2.33 we will fully support Edge.
 
-This leaves the list of supported web browsers at Chrome, Firefox, Edge.
+This leaves the list of supported web browsers at Chrome, Firefox, Safari and Edge.
