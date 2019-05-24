@@ -13,7 +13,7 @@ Considerations:
 
 **Conclusion**: We accept the proposal outlined.
 
-## #23 Use github's stale bot / autoresponder / etc.
+## #24 Use github's stale bot / autoresponder / etc.
 
 **Conclusion**: OK to have these types of automations. Would be nice to
 have issue templates to remind reporters about JIRA.
