@@ -18,7 +18,7 @@ Considerations:
 **Conclusion**: OK to have these types of automations. Would be nice to
 have issue templates to remind reporters about JIRA.
 
-##20 Move to a single d2-ui package
+## #20 Move to a single d2-ui package
 
 **Conclusion**: Move towards publishing @dhis2/d2-ui from a package with
 a single entry-point so we can move to semantic releases for a better
