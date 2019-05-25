@@ -1,4 +1,6 @@
-# WAR-file
+# Name scheme for `WAR`-files and Docker images
+
+## `WAR`-file
 
 #### Stable
 
@@ -32,7 +34,7 @@ URL structure: `/PR/{pull-id}.war`
 - https://releases.dhis2.org/PR/3353.war
 - https://releases.dhis2.org/PR/239.war
 
-# Docker
+## Docker
 
 ### Base images
 
