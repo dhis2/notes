@@ -36,7 +36,7 @@ URL structure: `/PR/{pull-id}.war`
 
 ### Base images
 
-#### Release
+#### Stable
 
 Repo: `core`
 Tag structure: `{version}`
