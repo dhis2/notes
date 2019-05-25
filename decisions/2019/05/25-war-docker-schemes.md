@@ -39,7 +39,7 @@ URL structure: `/PR/{pull-id}.war`
 #### Stable
 
 Repo: `core`
-Tag structure: `{version}`
+Tag structure: `{version}(-{variant})`
 
 - `dhis2/core:latest`
 - `dhis2/core:2.32.0`
