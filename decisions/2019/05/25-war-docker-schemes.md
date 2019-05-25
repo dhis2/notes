@@ -29,10 +29,10 @@ URL structure: `/dev/{branch}.war`
 
 #### Pull requests
 
-URL structure: `/PR/{pull-id}.war`
+URL structure: `/pr/{pull-id}.war`
 
-- https://releases.dhis2.org/PR/3353.war
-- https://releases.dhis2.org/PR/239.war
+- https://releases.dhis2.org/pr/3353.war
+- https://releases.dhis2.org/pr/239.war
 
 ## Docker
 
