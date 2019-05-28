@@ -68,16 +68,12 @@ Tag structure: `{branch}(-{variant})`
 #### Pull requests
 
 Repo: `core-pr`
-Tag structure: `{pull-id}-{trimmed branch name}`
+Tag structure: `{pull-id}`
 
-For PR images we can use the pull request id from GitHub combined
-with a trimmed branch name to follow the Docker tag rules:
+For PR images we can use the pull request id from GitHub:
 
-> A tag name may not start with a period or a dash and may contain a
-> maximum of 128 characters.
-
-- `dhis2/core-pr:123-my-feature-branch`
-- `dhis2/core-pr:234-another-feature-branch`
+- `dhis2/core-pr:123`
+- `dhis2/core-pr:234`
 
 ### Variants
 
