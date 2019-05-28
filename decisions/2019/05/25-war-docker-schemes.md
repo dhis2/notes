@@ -1,4 +1,6 @@
-# WAR-file
+# Name scheme for `WAR`-files and Docker images
+
+## `WAR`-file
 
 #### Stable
 
@@ -27,19 +29,19 @@ URL structure: `/dev/{branch}.war`
 
 #### Pull requests
 
-URL structure: `/PR/{pull-id}.war`
+URL structure: `/pr/{pull-id}.war`
 
-- https://releases.dhis2.org/PR/3353.war
-- https://releases.dhis2.org/PR/239.war
+- https://releases.dhis2.org/pr/3353.war
+- https://releases.dhis2.org/pr/239.war
 
-# Docker
+## Docker
 
 ### Base images
 
-#### Release
+#### Stable
 
 Repo: `core`
-Tag structure: `{version}`
+Tag structure: `{version}(-{variant})`
 
 - `dhis2/core:latest`
 - `dhis2/core:2.32.0`
