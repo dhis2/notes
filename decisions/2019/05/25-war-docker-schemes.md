@@ -4,35 +4,35 @@
 
 #### Stable
 
-URL structure: `/{version}.war`
+URL structure: `/dhis2-stable-{version}.war`
                  
-- https://releases.dhis2.org/2.32.0.war
-- https://releases.dhis2.org/2.31.4.war
+- https://releases.dhis2.org/dhis2-stable-2.32.0.war
+- https://releases.dhis2.org/dhis2-stable-2.31.4.war
 
 #### Canary
 
-URL structure: `/canary/{branch}(-{date}).war`
+URL structure: `/canary/dhis2-canary-{branch}(-{date}).war`
 
-- https://releases.dhis2.org/canary/master.war
-- https://releases.dhis2.org/canary/2.32.war
-- https://releases.dhis2.org/canary/2.32-20190523.war
+- https://releases.dhis2.org/canary/dhis2-canary-master.war
+- https://releases.dhis2.org/canary/dhis2-canary-2.32.war
+- https://releases.dhis2.org/canary/dhis2-canary-2.32-20190523.war
 
 Date is optional.
 
 #### Development
 
-URL structure: `/dev/{branch}.war`
+URL structure: `/dev/dhis2-dev-{branch}.war`
 
-- https://releases.dhis2.org/dev/2.31.war
-- https://releases.dhis2.org/dev/2.32.war
-- https://releases.dhis2.org/dev/master.war
+- https://releases.dhis2.org/dev/dhis2-dev-2.31.war
+- https://releases.dhis2.org/dev/dhis2-dev-2.32.war
+- https://releases.dhis2.org/dev/dhis2-dev-master.war
 
 #### Pull requests
 
-URL structure: `/pr/{pull-id}.war`
+URL structure: `/pr/dhis2-pr-{pull-id}.war`
 
-- https://releases.dhis2.org/pr/3353.war
-- https://releases.dhis2.org/pr/239.war
+- https://releases.dhis2.org/pr/dhis2-pr-3353.war
+- https://releases.dhis2.org/pr/dhis2-pr-239.war
 
 ## Docker
 
