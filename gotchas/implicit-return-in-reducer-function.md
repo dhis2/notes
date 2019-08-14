@@ -18,7 +18,7 @@ arr.reduce(
 ```javascript
 arr.reduce(
     (acc, { id, value }) => {
-        acc[id]: value
+        acc[id] = value
         return acc
     },
     {}
