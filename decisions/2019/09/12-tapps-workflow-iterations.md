@@ -2,7 +2,7 @@
 
 ## Attending
 
-Viktor, Hendrik, Erik, Ismay, Jan-Gerke
+Viktor, Hendrik, Erik, Ismay, Jan-Gerke, Birk
 
 ## Automated functional tests
 
