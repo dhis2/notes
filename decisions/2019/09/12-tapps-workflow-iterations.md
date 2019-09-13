@@ -63,8 +63,7 @@ Feature: Show search results in hierarchy
   this with QA)
 - Jan-Gerke to organise a session to demonstrate how it fits together
 
-## Better communication across the entire frontend team regarding
-libraries and shared components
+## Better communication across the entire frontend team regarding libraries and shared components
 
 **Conclusion**: We are building a lot of developer tools and libraries, and need to be better at:
 
@@ -85,8 +84,7 @@ to have a quick call.
 _Bonus: It's also nice from a team cohesion perspective to talk to
 colleagues "with voice" instead of text._
 
-## Focus on e.g. a few large refactors at a time, opting to have more
-devs working on the same thing
+## Focus on e.g. a few large refactors at a time, opting to have more devs working on the same thing
 
 **Conclusion**: We tend to have multiple application refactors in
 progress with fewer developers (often _one_). We want to shift to have a
@@ -97,8 +95,7 @@ working on them at the same time:
 - Better team work
 - Spread knowledge between apps to avoid creating information silos
 
-## Manage discussions in dhis2/notes stricter to ensure one thing is
-discussed in each issue
+## Manage discussions in dhis2/notes stricter to ensure one thing is discussed in each issue
 
 **Conclusion**: The dhis2/notes issue tracker has been a great
 improvement for having discussions over time in a more async way than
@@ -109,8 +106,7 @@ of GitHub issues makes it hard to follow along.
 We need to be better at breaking out "off-topic" discussions into new
 issues to track and deal with those discussions.
 
-## Where can we keep sensitive information that's good to have but not
-to expose publically?
+## Where can we keep sensitive information that's good to have but not to expose publically?
 
 **Conclusion**: Some ideas that were bounced around included a Keybase team so we can
 share more sensitive information. We already utilise Keybase encrypted
