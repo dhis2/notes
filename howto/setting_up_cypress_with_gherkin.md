@@ -125,6 +125,12 @@ https://docs.cypress.io/guides/guides/environment-variables.html#Setting
 Just make sure to not add any credentials to git, so if you want to use
 the `cypress.env.json` file, add it to your local (global .gitignore; [How to](http://egorsmirnov.me/2015/05/04/global-gitignore-file.html))
 
+There's no defined way of how to create a npm script that will run both `yarn start` and `cypress:open` concurrently,
+so as of now you have to run them separately.
+There's no need to log in to the backend, it'll be done by cypress and the login support command defined above in this document.
+
+(Note: The reason why there's not a proper concurrent way yet is that `cypress:open` would need to wait for `yarn start` to have finished. But as `yarn start` never exits, there's no way to know that)
+
 <a name="module_documentation" href=""></a>
 ## Module documentation
 
