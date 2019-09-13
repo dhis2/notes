@@ -21,3 +21,5 @@ libraries and shared components
 
 ## Focus on e.g. a few large refactors at a time, opting to have more
 devs working on the same thing
+
+## Manage discussions in dhis2/notes stricter to ensure one thing is discussed in each issue
