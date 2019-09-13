@@ -108,3 +108,15 @@ of GitHub issues makes it hard to follow along.
 
 We need to be better at breaking out "off-topic" discussions into new
 issues to track and deal with those discussions.
+
+## Where can we keep sensitive information that's good to have but not
+to expose publically?
+
+**Conclusion**: Some ideas that were bounced around included a Keybase team so we can
+share more sensitive information. We already utilise Keybase encrypted
+storage to share passwords, so we could use that.
+
+Another idea was to use a DHIS2 private notes repo, but our GitHub plan
+does not allow private repositories, so that's a no-go.
+
+Keybase is viable, but no consensus around this yet.
