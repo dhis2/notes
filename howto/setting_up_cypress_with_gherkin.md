@@ -1,16 +1,16 @@
 # Setting up Cypress with Gherkin
 
 1. [Installing the required dependencies](#installing_the_required_dependencies)
-  1. [Install Cypress](#install_cypress)
-  1. [Install cypress-cucumber-preprocessor](#install_cypress-cucumber-preprocessor)
-  1. [Add login hook](#add_login_hook)
-    1. [Log in before each test](#log_in_before_each_test)
-  1. [Clean up](#clean_up)
+   1. [Install Cypress](#install_cypress)
+   1. [Install cypress-cucumber-preprocessor](#install_cypress-cucumber-preprocessor)
+   1. [Add login hook](#add_login_hook)
+      1. [Log in before each test](#log_in_before_each_test)
+   1. [Clean up](#clean_up)
 1. [Write feature files](#write_feature_files)
 1. [Running the tests](#running_the_tests)
 1. [Module documentation](#module_documentation)
-  1. [cypress](#module_documentation_cypress)
-  1. [cypress-cucumber-preprocessor](#module_documentation_cypress-cucumber-preprocessor)
+   1. [cypress](#module_documentation_cypress)
+   1. [cypress-cucumber-preprocessor](#module_documentation_cypress-cucumber-preprocessor)
 
 <a name="installing_the_required_dependencies" href=""></a>
 ## Installing the required dependencies
