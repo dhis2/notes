@@ -56,7 +56,6 @@ import './Login.js'
 Add the following code to the `Login.js`:
 
 ```js
-const defaultLoginUrl = 'https://debug.dhis2.org/dev'
 const loginEndPoint = 'dhis-web-commons/security/login.action'
 
 /**
@@ -116,14 +115,14 @@ You can now start to write feature files in `/cypress/integration/[Feature_name]
 <a name="running_the_tests" href=""></a>
 ## Running the tests
 
-You need to have two environment variables ready when running the tests:
-`LOGIN_USERNAME` and `LOGIN_PASSWORD`
+**You need to have three environment variables ready when running the tests:**
+`LOGIN_USERNAME`, `LOGIN_PASSWORD` and `LOGIN_URL`
 
 There are several options how to pass them to cypress:
 https://docs.cypress.io/guides/guides/environment-variables.html#Setting
 
 Just make sure to not add any credentials to git, so if you want to use
-the `cypress.env.json` file, add it to your local (global .gitignore; [How to](http://egorsmirnov.me/2015/05/04/global-gitignore-file.html))
+the `cypress.env.json` file, add it to the `.gitignore`.
 
 There's no defined way of how to create a npm script that will run both `yarn start` and `cypress:open` concurrently,
 so as of now you have to run them separately.
