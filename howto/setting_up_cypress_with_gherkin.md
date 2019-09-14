@@ -103,9 +103,10 @@ Before((testCase, callback) => cy.login())
 Remove the example files
 
 ```
-rm -r cypress/integration/examples cypress/fixtures/example.json cypress/support/*
-touch cypress/support/index.js
+rm -r cypress/integration/examples cypress/fixtures/example.json cypress/support/*commands.js
 ```
+
+And remove the `import './commands.js'` line from `cypress/support/index.js`
 
 <a name="write_feature_files" href=""></a>
 ## Write feature files
