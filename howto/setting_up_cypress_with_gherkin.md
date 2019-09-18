@@ -167,7 +167,8 @@ Then('he should be presented a home page', () => {
 
 * `LOGIN_USERNAME` and `LOGIN_PASSWORD` are what you'd enter on a dhis2
 instance's login page
-* `LOGIN_URL` is the domain (and suffix, e. g. `/dev` or `/2.31.5`)
+* `LOGIN_URL` is the domain (and suffix, e. g. `/dev` or `/2.31.5`) of your
+  dhis2 instance's login page
 * `APP_URL` is the url of your local development app
 
 There are several options how to pass them to cypress:
@@ -180,7 +181,7 @@ the `cypress.env.json` file, add it to the `.gitignore`.
 #### Start app and cypress
 
 ```sh
-# shell 1
+# shell 1; Make sure to use the correct backend (same as "LOGIN_URL")
 yarn start
 
 # shell 2
