@@ -11,6 +11,7 @@
       1. [Feature file](#example_files_feature)
       1. [Step definitions](#example_files_steps)
       1. [Start app and cypress](#example_files_startup)
+      1. [Add environment variables](#example_files_env_vars)
 1. [Running the tests](#running_the_tests)
 1. [Module documentation](#module_documentation)
    1. [cypress](#module_documentation_cypress)
@@ -26,14 +27,16 @@
 https://docs.cypress.io/guides/getting-started/installing-cypress.html
 * Also add the `cypress:open` npm script
 
+Then run `yarn cypress:open` to generate the directories and example files.
+
 <a name="install_cypress-cucumber-preprocessor" href=""></a>
 ### Install cypress-cucumber-preprocessor
 
-Follow the installation instructions:
+Follow the installation **and "Cypress Configuration"** instructions:
 
 https://github.com/TheBrainFamily/cypress-cucumber-preprocessor#installation
 
-Make sure to follow the cosmiconfig conventions by adding this to the package.json:
+Make sure to follow the cosmiconfig conventions by adding this to the **package.json**:
 
 ```json
 {
@@ -50,11 +53,6 @@ In the next step you'll create a `login` method on the `cy` instance by adding
 it through the built-in support mechanism.
 
 Create the following file: `/cypress/support/Login.js`.<br />
-Import that file in `/cypress/support/index.js`:
-
-```js
-import './Login.js'
-```
 
 Add the following code to the `Login.js`:
 
@@ -88,7 +86,13 @@ Cypress.Commands.add('login', () => {
 })
 ```
 
-Check [Running the tests](#running_the_tests) to see how to add the env vars.
+Import that file in `/cypress/support/index.js`:
+
+```js
+import './Login.js'
+```
+
+Check [Add environment variables](#example_files_env_vars) to see how to add the env vars.
 
 <a name="log_in_before_each_test" href=""></a>
 #### Log in before each test
@@ -155,6 +159,23 @@ Then('he should be presented a home page', () => {
 })
 ```
 
+<a name="example_files_env_vars" href=""></a>
+#### Add environment variables
+
+**You need to have four environment variables ready when running the tests:**
+`LOGIN_USERNAME`, `LOGIN_PASSWORD`, `LOGIN_URL` and `APP_URL`
+
+* `LOGIN_USERNAME` and `LOGIN_PASSWORD` are what you'd enter on a dhis2
+instance's login page
+* `LOGIN_URL` is the domain (and suffix, e. g. `/dev` or `/2.31.5`)
+* `APP_URL` is the url of your local development app
+
+There are several options how to pass them to cypress:
+https://docs.cypress.io/guides/guides/environment-variables.html#Setting
+
+Just make sure to not add any credentials to git, so if you want to use
+the `cypress.env.json` file, add it to the `.gitignore`.
+
 <a name="example_files_startup" href=""></a>
 #### Start app and cypress
 
@@ -170,15 +191,6 @@ The app url will most likely be either `localhost:3000` (CRA apps) or `localhost
 
 <a name="running_the_tests" href=""></a>
 ## Running the tests
-
-**You need to have three environment variables ready when running the tests:**
-`LOGIN_USERNAME`, `LOGIN_PASSWORD` and `LOGIN_URL`
-
-There are several options how to pass them to cypress:
-https://docs.cypress.io/guides/guides/environment-variables.html#Setting
-
-Just make sure to not add any credentials to git, so if you want to use
-the `cypress.env.json` file, add it to the `.gitignore`.
 
 There's no defined way of how to create a npm script that will run both `yarn start` and `cypress:open` concurrently,
 so as of now you have to run them separately.
