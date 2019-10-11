@@ -224,3 +224,17 @@ of different repositories before deciding if it works for us or not.
   commit message, or, locally changing the non-semantic commit message
   through something like: `git commit --amend && git push origin HEAD
   --force-with-lease`.
+
+- When squashing commits locally we lose the possibility to see the
+  individual commits forever, in a squash-merge workflow you could see
+  the individual commits before they got squashed in the PR.
+
+  Workaround is available to the developer that did the squash using
+  reflog, but it's not distributed to other devs.
+
+- If a developer realises after squashing that she needs to split out
+  something to a separate commit, that is trickier to do than in a
+  squash-merge workflow.
+
+  Workaround is available using reflog, but may feel arcane to
+  developers.
