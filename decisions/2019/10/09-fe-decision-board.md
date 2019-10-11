@@ -62,6 +62,10 @@ Since option **(1)** is closer to the vision of the `d2-style` tool, we
 will start with that solution, and if the size of the installed tool
 gets out of hand, we will have to re-think the approach.
 
+One suggestion was to use custom NPM packages for specific presets, e.g.
+for React: `@dhis2/cli-style-preset-react` to avoid bundling all
+dependencies in `@dhis2/cli-style`.
+
 ### Unified form handling #25
 
 **Conclusion**: Going forward with
