@@ -92,18 +92,19 @@ On hindsight there are multiple issues conflated in this topic:
 - Allow the developer to **use the same workflow everywhere** so she
   doesn't have to keep track of what to do when in 40+ repos.
 
+Splitting them up as follows:
 
-#### Use the same workflow everywhere
+### Use the same workflow everywhere
 
 **Conclusion**: Run a trial for a single merge strategy tracked in
 [#72](https://github.com/dhis2/notes/issues/72).
 
-#### Automatic merges
+### Automatic merges
 
 **Conclusion**: Run a trial tracked in
 [#71](https://github.com/dhis2/notes/issues/71).
 
-#### Defer the automatic release system
+### Defer the automatic release system
 
 **Conclusion**: There are a few options of varying complexity:
 
