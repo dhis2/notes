@@ -78,7 +78,7 @@ a _great time_ to go through `ui-forms` and get involved!
 ### Slow down releases a bit, improve automation
 
 **Conclusion**: The proposal was rejected. This was in part due to
-wishes to not split the manual workflow in two by having e.g.
+wishes to not split the developer workflow in two by having e.g.
 squash-merges to `develop` and merges to `master`.
 
 On hindsight there are multiple issues conflated in this topic:
@@ -92,29 +92,18 @@ On hindsight there are multiple issues conflated in this topic:
 - Allow the developer to **use the same workflow everywhere** so she
   doesn't have to keep track of what to do when in 40+ repos.
 
-Going through them one by one:
+
+#### Use the same workflow everywhere
+
+**Conclusion**: Run a trial for a single merge strategy tracked in #72.
 
 #### Automatic merges
 
-**Trial**: Allow Dependabot to merge a sub-set of dependencies to
-`master` in a low-risk repository:
-[cli-style](https://github.com/dhis2/cli-style)
-
-The up-to-date automerged dependencies can be seen in
-[`cli-style/.dependabot/config.yml`](https://github.com/dhis2/cli-style/blob/master/.dependabot/config.yml)
-at any time. At the time of writing the strategy is to automatically
-merge any **minor** updates to any `@dhis2` scoped package and merge all
-**patch** versions for known security fixes. Others will be manually
-handled.
-
-Will run the trial for 1 week in **cli-style** before rolling out to
-**ui-widgets**. If everything keeps going all right we will identify
-another candidate from the [Dependabot enabled
-repos](https://app.dependabot.com/accounts/dhis2).
+**Conclusion**: Run a trial tracked in #71.
 
 #### Defer the automatic release system
 
-There are a few options of varying complexity:
+**Conclusion**: There are a few options of varying complexity:
 
 - The proposed workflow in the agenda.
 
@@ -130,111 +119,3 @@ There are a few options of varying complexity:
 The `[skip ci]` and `[defer release]` options are different variations
 of the same, so we will go ahead with one of them. If the defer-release
 PR is accepted, we will use that. If not, we will use skip-ci.
-
-#### Use the same workflow everywhere
-
-Currently we use "squash-merge" as our default strategy, and we also use
-`next` branches to merge multiple fixes/features to `master` at the same
-time.
-
-There is a significant downside of this in terms of how the changelogs
-are generated.
-
-This commit was merged from `next` to `master` to release version 3.0.0
-of `@dhis2/ui-core`:
-https://github.com/dhis2/ui-core/commit/6df182bdbb1de8b80d76ac7677a1a37478aa8da6
-
-The commit message itself is nicely formatted and has a list of all the
-changes, but the CHANGELOG is quite sparse:
-https://github.com/dhis2/ui-core/blob/master/CHANGELOG.md#300-2019-06-06
-
-It contains a single `chore` and lists the breaking change. In order to
-get all the commits into the changelog, they must land on `master` as
-well. We can use the `[skip ci]`/`[defer release]` tag to do that when
-there are two or three PRs to merge after eachother, but when there are
-[69 commits bundled into one
-release](https://github.com/dhis2/ui-core/pull/430/commits) that is not
-an option.
-
-Given that we want:
-
-- Linear history on `master` (no merge commits)
-- One commit per feature/fix
-- Option for bundling changes for a release
-- Precise changelogs
-
-Then the "rebase-merge" strategy is a good option:
-
-- We can enforce that _all_ commits on a branch are semantic commits as
-  as status check (using **probot-semantic-pull-requests** currently enabled
-  in all repositories).
-
-- No need to ever provide a manual commit message in GitHub when
-  merging a PR.
-
-- "rebase-merge" is not a true rebase on GitHub, it results in a
-  fast-forward merge just like "squash-merge".
-
-- If a PR contains multiple commits, they will land as-is on `master`
-  and show up in the changelog correctly, so we can have a `fix` and
-  `feat` in the same PR.
-
-- If a PR contains a single commit, it will also land as-is on `master`.
-
-- It is up to the developer to decide if a PR should be squashed before
-  merging it, and that will need to be done locally.
-  
-- Locally squashing has the added safety net of re-running the semantic
-  commit checks, something the "squash-merge" in GitHub cannot do.
-
-**Trial**: We will start using the "rebase-merge" workflow on a couple
-of different repositories before deciding if it works for us or not.
-
-##### Repos and rationale:
-
-1. `dhis2/cli-style`: small and self-contained repo, used to verify that
-   Dependabot can still merge PRs, and has automatic release to NPM.
-
-2. `dhis2/app-store`: self-contained and works with feature branches,
-   has automatic deployment to production on AWS.
-
-3. `dhis2/ui-core`: Automatically deploys to NPM, has a lot of activity
-   in all types (fix, feature, breaking changes), and has an upcoming
-   `next` branch with many commits that will land and be documented in
-   the changelog.
-
-##### Known issues and workarounds:
-
-- Do not leave a comment saying "@dependabot squash and merge" when
-  approving a Dependabot PR. We only need to give it an approving review
-  with an empty comment to signal to Dependabot to merge the PR. If we
-  tell it to "squash and merge" on a "rebase and merge" PR, then
-  Dependabot remembers that forever, and it will always fail to
-  squash-merge it.
-
-  The workaround is to manually hit merge.
-
-- When using the GitHub feature to "Update branch" with `master`, GitHub
-  creates a merge commit with a non-semantic commit message like "Merge
-  branch '{branch}' into {branch}". The Semantic Pull Requests bot is
-  going to see that the branch now has a non-semantic commit and will
-  not let you merge that to master.
-
-  The workaround is to update your branch locally using a semantic
-  commit message, or, locally changing the non-semantic commit message
-  through something like: `git commit --amend && git push origin HEAD
-  --force-with-lease`.
-
-- When squashing commits locally we lose the possibility to see the
-  individual commits forever, in a squash-merge workflow you could see
-  the individual commits before they got squashed in the PR.
-
-  Workaround is available to the developer that did the squash using
-  reflog, but it's not distributed to other devs.
-
-- If a developer realises after squashing that she needs to split out
-  something to a separate commit, that is trickier to do than in a
-  squash-merge workflow.
-
-  Workaround is available using reflog, but may feel arcane to
-  developers.
