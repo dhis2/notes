@@ -31,3 +31,10 @@ As we didn't want to include any dependencies in `ui-core` before considering a
 positioning engine, we decided that we'll read the source code of positioning
 engines carefully in case we'd have to maintain it in case the original
 maintainers won't do it themselves anymore.
+
+#### Components that require specs for further determination
+
+* Select
+* Menu
+* Popover
+* Tooltip
