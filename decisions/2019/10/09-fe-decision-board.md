@@ -120,5 +120,4 @@ Splitting them up as follows:
   for it has been posted](https://github.com/dhis2/cli/pull/161).
 
 The `[skip ci]` and `[defer release]` options are different variations
-of the same, so we will go ahead with one of them. If the defer-release
-PR is accepted, we will use that. If not, we will use skip-ci.
+of the same. The PR for the defer release tag has been merged and is available in [`@dhis2/cli` in version 2.5.0](https://github.com/dhis2/cli/releases/tag/v2.5.0).
