@@ -3,6 +3,9 @@
 1. [Installing the required dependencies](#installing_the_required_dependencies)
    1. [Install Cypress](#install_cypress)
    1. [Install cypress-cucumber-preprocessor](#install_cypress-cucumber-preprocessor)
+   1. [Install concurrently and wait-on](#install_concurrently_and_wait-on)
+   1. [Add env var setup script](#add_env_var_setup_script)
+   1. [Add scripts to package.json](#add_scripts_to_package-json)
    1. [Add login hook](#add_login_hook)
       1. [Log in before each test](#log_in_before_each_test)
    1. [Clean up](#clean_up)
@@ -44,6 +47,168 @@ Make sure to follow the cosmiconfig conventions by adding this to the **package.
         "nonGlobalStepDefinitions": true
     }
 }
+```
+
+<a name="install_concurrently_and_wait-on" href=""></a>
+### Install concurrently and wait-on
+
+Run the following:
+
+```
+yarn add -D concurrently wait-on
+```
+
+<a name="add_env_var_setup_script" href=""></a>
+### Add env var setup script
+
+Create a `scripts` folder in the root of your project and add
+`scripts/check_env_vars.js` with the following contents:
+
+```js
+const fs = require('fs')
+const path = require('path')
+const readline = require('readline')
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+})
+
+const read = (...args) =>
+    new Promise(resolve => {
+        rl.question(...args, resolve)
+    })
+
+const DEFAULT_ENV_FILE_PATH = path.join(__dirname, '../', 'cypress.env.json')
+
+const REQUIRED_ENV_VARS = {
+    LOGIN_USERNAME: '',
+    LOGIN_PASSWORD: '',
+    APP_URL: 'localhost:3000',
+}
+
+const getExistingEnvVars = envFilePath => {
+    const fileContents = fs.readFileSync(envFilePath, { enconding: 'utf8' })
+    let envVars = {}
+
+    try {
+        envVars = JSON.parse(fileContents)
+    } catch (e) {
+        console.error("Couldn't parse cypress.env.json")
+        console.error(e.message)
+        process.exit(1)
+    }
+
+    return envVars
+}
+
+const requestInformationForEnvVar = ({ resolve, defaultValue, envVar }) => {
+    read(`Please provide the value for ${envVar}${defaultValue}\n`).then(
+        answer => {
+            if (answer === '' && REQUIRED_ENV_VARS[envVar]) {
+                resolve([envVar, REQUIRED_ENV_VARS[envVar]])
+            } else if (answer !== '') {
+                resolve([envVar, answer])
+            } else {
+                requestInformationForEnvVar({ resolve, defaultValue, envVar })
+            }
+        }
+    )
+}
+
+const requestMissingInformation = missingEnvVars => {
+    return missingEnvVars.reduce((process, envVar) => {
+        return process.then(answers => {
+            const defaultValue = REQUIRED_ENV_VARS[envVar]
+                ? ` (${REQUIRED_ENV_VARS[envVar]})`
+                : ''
+
+            return new Promise(resolve => {
+                const customResolve = answer => resolve([...answers, answer])
+                requestInformationForEnvVar({
+                    resolve: customResolve,
+                    defaultValue,
+                    envVar,
+                })
+            })
+        })
+    }, Promise.resolve([]))
+}
+
+const writeMissingInformation = ({
+    existingEnvVars,
+    answerRequests,
+    envFilePath,
+}) => {
+    return answerRequests.then(answers => {
+        const valuesObject = answers.reduce(
+            (curValuesObject, [envVar, value]) => ({
+                ...curValuesObject,
+                [envVar]: value,
+            }),
+            existingEnvVars
+        )
+
+        fs.writeFileSync(envFilePath, JSON.stringify(valuesObject, null, 4))
+
+        return valuesObject
+    })
+}
+
+const addMissingEnvVars = envFilePath => {
+    const existingEnvVars = getExistingEnvVars(envFilePath)
+    const missingEnvVars = Object.keys(REQUIRED_ENV_VARS).filter(
+        envVar => !(envVar in existingEnvVars)
+    )
+    const answerRequests = requestMissingInformation(missingEnvVars)
+
+    return writeMissingInformation({
+        existingEnvVars,
+        answerRequests,
+        envFilePath,
+    })
+}
+
+const createEnvFile = envFilePath => {
+    const missingEnvVars = Object.keys(REQUIRED_ENV_VARS)
+    const answerRequests = requestMissingInformation(missingEnvVars)
+
+    return writeMissingInformation({
+        existingEnvVars: {},
+        answerRequests,
+        envFilePath,
+    })
+}
+
+const checkEnvFile = () => {
+    const envFilePath = DEFAULT_ENV_FILE_PATH
+
+    const job = !fs.existsSync(envFilePath)
+        ? createEnvFile(envFilePath)
+        : addMissingEnvVars(envFilePath)
+
+    return job.then(() => rl.close())
+}
+
+checkEnvFile()
+    .then(() => exit(0))
+    .catch(() => exit(1))
+```
+
+<a name="add_scripts_to_package-json" href=""></a>
+### Add scripts to package.json
+
+Add the following scripts.
+They will allow you to run/open cypress with just one command
+
+```
+"cypress:start": "BROWSER=none yarn start",
+"cypress:envtest": "node ./scripts/check_env_vars.js",
+"cypress:browser": "cypress open --config baseUrl=http://localhost:3000,defaultCommandTimeout=15000",
+"cypress:ci": "NO_COLOR=1 cypress run -b $BROWSER --config baseUrl=http://localhost:3000,defaultCommandTimeout=15000",
+"cypress:open": "yarn cypress:envtest && concurrently --kill-others -n cra,cypress 'yarn cypress:start' 'wait-on http-get://localhost:3000 && yarn cypress:browser --env LOGIN_URL=$REACT_APP_DHIS2_BASE_URL'",
+"cypress:run": "yarn cypress:envtest && concurrently --kill-others --success first -n cra,cypress 'yarn cypress:start' 'wait-on http-get://localhost:3000 && yarn cypress:ci --env LOGIN_URL=$REACT_APP_DHIS2_BASE_URL'"
+
 ```
 
 <a name="add_login_hook" href=""></a>
