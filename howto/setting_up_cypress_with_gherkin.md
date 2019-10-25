@@ -8,6 +8,7 @@
    1. [Add scripts to package.json](#add_scripts_to_package-json)
    1. [Add login hook](#add_login_hook)
       1. [Log in before each test](#log_in_before_each_test)
+   1. [Add entries to .gitignore](#add_entries_to_gitignore)
    1. [Clean up](#clean_up)
 1. [Write feature files](#write_feature_files)
    1. [Example files to test the setup](#example_files)
@@ -272,6 +273,17 @@ import { Before } from 'cypress-cucumber-preprocessor/steps'
 Before(() => cy.login())
 ```
 
+<a name="add_entries_to_gitignore" href=""></a>
+### Add entries to .gitignore
+
+Add these lines to the `.gitignore`:
+
+```
+cypress/videos
+cypress/screenshots
+cypress.env.json
+```
+
 <a name="clean_up" href=""></a>
 ### Clean up
 
@@ -339,30 +351,25 @@ instance's login page
 There are several options how to pass them to cypress:
 https://docs.cypress.io/guides/guides/environment-variables.html#Setting
 
-Just make sure to not add any credentials to git, so if you want to use
-the `cypress.env.json` file, add it to the `.gitignore`.
+The `LOGIN_URL` is supplied automatically with the value of
+`REACT_APP_DHIS2_BASE_URL`. If you haven't added it to our `.profile` file, you
+need to supply it before running `yarn cypress:open` or `yarn cypress:run`.
 
-<a name="example_files_startup" href=""></a>
-#### Start app and cypress
-
-```sh
-# shell 1; Make sure to use the correct backend (same as "LOGIN_URL")
-yarn start
-
-# shell 2
-yarn cypress:open --env LOGIN_USERNAME=[insert user name here],LOGIN_PASSWORD=[insert password here],APP_URL=[insert app url here]
-```
-
-The app url will most likely be either `localhost:3000` (CRA apps) or `localhost:8081` (old school apps)
+In order to not having to set up the others manually everytime you clone the
+repository, the `scripts/check_env_vars.js` is executed each time before cypress
+is executed. It will check the `cypress.env.json` file and ask you to enter the
+values, because that file is ignored by git.
 
 <a name="running_the_tests" href=""></a>
 ## Running the tests
 
-There's no defined way of how to create a npm script that will run both `yarn start` and `cypress:open` concurrently,
-so as of now you have to run them separately.
-There's no need to log in to the backend, it'll be done by cypress and the login support command defined above in this document.
+```sh
+# If you want to use the GUI (that's what you'd use during development)
+yarn cypress:open
 
-(Note: The reason why there's not a proper concurrent way yet is that `cypress:open` would need to wait for `yarn start` to have finished. But as `yarn start` never exits, there's no way to know that)
+# If you want to run the CI tests (normally that should be done by travis)
+yarn cypress:run
+```
 
 <a name="module_documentation" href=""></a>
 ## Module documentation
