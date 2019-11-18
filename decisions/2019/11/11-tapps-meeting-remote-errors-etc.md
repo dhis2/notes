@@ -22,8 +22,10 @@ we think would be inline with our way of work.
 
 Input from the field from Austin:
 
-- Import/Export app cannot import GML
-- Import/Export app is used to configure dhis2 instead of the Maintenance app
+Import/Export app is used to configure DHIS2 instead of the Maintenance
+app, since the Maintenance app does not support selecting/creating or
+uploading polygons for organisation units; only manually entered
+coordinates are supported.
 
 ## Error reporting
 
