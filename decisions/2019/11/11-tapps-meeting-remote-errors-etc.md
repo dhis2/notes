@@ -48,8 +48,8 @@ What we want to do is:
 - Collect the data at the instance level and iteratively add more
   features. "Send data to DHIS2 Core Team" can be a later feature.
 
-Next step is to schedule a meeting to set up a proposal to anchor the
-discussion across teams in a context.
+**Conclusion**: Austin and Jan-Gerke are to set up a proposal to anchor
+the discussion across teams in a context.
 
 ## Positioning engine and feature files
 
