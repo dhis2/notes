@@ -42,7 +42,7 @@
 
 ## Actions
 
-- @cooper-joe to supply min-width values for all input-type components
+- @cooper-joe to supply min-width values for all input-type components (completed: [#605](https://github.com/dhis2/ui-core/issues/605))
 - add `inputWidth` prop to all `Field` components
 - remove `width` props from all input-type components
 - ensure status icons do not add width to all input-type components
