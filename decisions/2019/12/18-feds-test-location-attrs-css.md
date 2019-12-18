@@ -54,5 +54,5 @@ Additonal discussions:
   ship CSS and markup as a unit so let's keep **Styled JSX** in UI
   libraries.
 
-Conclusion: Move ahead with the proposal.
+**Conclusion**: Move ahead with the proposal.
 
