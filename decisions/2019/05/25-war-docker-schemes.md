@@ -4,28 +4,31 @@
 
 #### Stable
 
-URL structure: `/dhis2-stable-{version}.war`
+URL structure: `{version}/dhis2-stable-{version}.war`
                  
-- https://releases.dhis2.org/dhis2-stable-2.32.0.war
-- https://releases.dhis2.org/dhis2-stable-2.31.4.war
+- https://releases.dhis2.org/2.32/dhis2-stable-2.32.0.war
+- https://releases.dhis2.org/2.31/dhis2-stable-2.31.4.war
+additionally,
+- https://releases.dhis2.org/2.32/dhis2-stable-latest.war  <-- same as the last 2.32 patch number
+- https://releases.dhis2.org/2.31/dhis2-stable-latest.war  <-- same as the last 2.31 patch number
 
 #### Canary
 
-URL structure: `/canary/dhis2-canary-{branch}(-{date}).war`
+URL structure: `{version}/canary/dhis2-canary-{branch}(-{date}).war`
 
-- https://releases.dhis2.org/canary/dhis2-canary-master.war
-- https://releases.dhis2.org/canary/dhis2-canary-2.32.war
-- https://releases.dhis2.org/canary/dhis2-canary-2.32-20190523.war
+- https://releases.dhis2.org/master/canary/dhis2-canary-master.war  <-- the latest canary build
+- https://releases.dhis2.org/2.32/canary/dhis2-canary-2.32.war  <-- the latest canary build
+- https://releases.dhis2.org/2.32/canary/dhis2-canary-2.32-20190523.war  <-- a specific build
 
-Date is optional.
+Date is optional, for builds that will be kept for a period.
 
 #### Development
 
-URL structure: `/dev/dhis2-dev-{branch}.war`
+URL structure: `{version}/dev/dhis2-dev-{branch}.war`
 
-- https://releases.dhis2.org/dev/dhis2-dev-2.31.war
-- https://releases.dhis2.org/dev/dhis2-dev-2.32.war
-- https://releases.dhis2.org/dev/dhis2-dev-master.war
+- https://releases.dhis2.org/2.31/dev/dhis2-dev-2.31.war
+- https://releases.dhis2.org/2.32/dev/dhis2-dev-2.32.war
+- https://releases.dhis2.org/master/dev/dhis2-dev-master.war
 
 #### Pull requests
 
