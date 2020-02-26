@@ -63,7 +63,24 @@ user-driven behavior should be tested end-to-end.
 For more implementation detail oriented tests, we should prefer Jest.
 
 The important take-away is that we have tests -- and Jest vs. Cypress
-is left for consideration of the implementers and reviwers.
+is left for consideration of the implementers and reviewers.
+
+There is a preference towards testing behavior, including `onEvent`
+handlers, through Cypress, as that is a more realistic test than through
+simulated events.
+
+## Toolkits
+
+We have decided to standardize on Jest over alternatives such as Tape
+and Lab for business logic.
+
+Cypress is prefered over Selenium, WebDriver, etc. We have a [utility
+library](https://github.com/dhis2/cli-utils-cypress/) to setup Cypress
+with the recommended DHIS2 configuration.
+
+We want to be able to generate TAP-compliant reports though for reasons
+outlined in [previous
+decisions](decisions/2019/12/18-feds-test-location-attrs-css.md).
 
 # Refactor party
 
