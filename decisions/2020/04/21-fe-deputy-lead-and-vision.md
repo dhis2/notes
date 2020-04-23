@@ -32,7 +32,14 @@ information meeting.
    
 ### Long-term Frontend Vision and Goals
 
-- Austin presented the 6-12 months plan to: improve maintainability, consistency, and scalability of our application suite.
+- Austin presented the 6-12 months plan to: improve maintainability, consistency, and scalability of our application suite:
+
+> 1. **Maintainability** (Application lifecycle overhaul)
+>    - Continuous application releases delivery & deployment (App Hub, App Platform)
+>    - Decouple web apps from DHIS2 Core (Core, App Platform)
+>    - General, robust version toggling in apps (App Runtime, individual apps)
+> 2. **Performance, Reliability** (technical and implementation)
+> 3. **Usability** (system-wide, cross-functional, user-focused)
 
 - DHIS2 is the capital-P **Platform** and we are developing tooling to make it easy to develop robust applications for our platform.
 
