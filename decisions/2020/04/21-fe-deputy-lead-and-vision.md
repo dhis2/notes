@@ -14,7 +14,7 @@ information meeting.
 
 ### Practical info
 
-- Viktor (@varl) is on parental leave from **2020 May 4** to **2020 September 14**.
+- Viktor (@varl) is on parental leave from **2020 May 4** to **2020 September 13** (back at work 14th).
 
 - In the meantime, Viktor's responsibilities will be split:
 
