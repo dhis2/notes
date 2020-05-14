@@ -62,14 +62,14 @@ As we ramp up for 2.35 development, there are 4 major cross-team initiatives tha
 * PWA & Dashboards
     * Jan
     * Edoardo
-    * Jan-Gherke (app-runtime data caching)
+    * Jan-Gerke (app-runtime data caching)
     * Joakim (tracker perspective & advice)
     * Joe (UI/UX)
 * Platform Improvements & Adoption
     * Ismay
     * Jennifer (i18n)
     * Martin (i18n)
-    * Jan-Gherke (e2e testing & automation)
+    * Jan-Gerke (e2e testing & automation)
     * Bjørn (plugins & bundle size)
     * Hendrik (UI)
 * Evangelism & Documentation
@@ -77,7 +77,7 @@ As we ramp up for 2.35 development, there are 4 major cross-team initiatives tha
     * Milagros
     * Wahed (coordinate w/ Magnus @ UiO)
     * Hendrik (user/market research)
-    * Jan-Gherke
+    * Jan-Gerke
 
 (*) Austin will help to coordinate and contribute to other taskforces as well
 
