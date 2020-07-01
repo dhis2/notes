@@ -34,7 +34,7 @@ Link to related issue and agenda: https://github.com/dhis2/notes/issues/114
 **Conclusion:**
 
 - Going forward with implementation of overrides of core apps.
-- Jira issue for this: https://jira.dhis2.org/browse/DHIS2-4394
+- Jira issue for this: https://jira.dhis2.org/browse/DHIS2-9092
 
 ## Re-introduce the proxy through core to App Hub
 
@@ -43,12 +43,17 @@ Link to related issue and agenda: https://github.com/dhis2/notes/issues/114
     - Air gaps, as clients may not have internet access or have poor internet connections.
 - Security needs to be considered
 - When reintroducing, we need to implement new endpoints like "/channels", and verify that all endpoints are working. 
+- We do not want App Hub updates to be delayed by core releases.
+- Proposed solution: A wildcard proxy that forwards requests from eg. "/api/apphub/*" to "https://apps.dhis2.org/api/*"
 
 **Conclusion:**
 
 - Re-introduce the proxy. Jira issue: https://jira.dhis2.org/browse/DHIS2-9093
-- Research security aspect of this, and verify that the server validates the CA-certificate of App Hub. 
-    
+- Research security risks and (hopefully) implement a pass-through proxy to the App Hub.
+- Security engineer (Moarten S) likely needs to investigate application management security
+    - Verify that the server validates the CA-certificate of App Hub. 
+    - Investigate vulnerability surface area of wildcard proxy
+    - Other: mitigate risks of MITM attacks of intalled apps with eg. hashes of installed apps
 
 ## Versioning and release channels
 
@@ -56,8 +61,8 @@ Link to related issue and agenda: https://github.com/dhis2/notes/issues/114
     - To support notifications when a new version is released
 - This is currently hard, as we do not enforce semantic versioning, and can thus not assume anything about the version-string.
 - Cannot use date of upload either, as previous versions may be updated after a higher version.
-- Currently, release channels may have multiple versions. Austin pointed out that we could follow the "npm" model of tags, and restrict this to one version per channel, so when "stable" always points to one versions.
-    - Theres some complexity with this regarding supported DHIS2 versions.
+- Currently, release channels may have multiple versions. Austin pointed out that we could follow the "npm" model of tags, and restrict this to one version per channel, so that "stable" always points to one versions.
+    - There's some complexity with this regarding supported DHIS2 versions.
     - There can potentially be overlap of supported DHIS2-versions by different app-versions
 
 **Conclusions:**
