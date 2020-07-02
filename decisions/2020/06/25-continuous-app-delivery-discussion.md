@@ -50,7 +50,7 @@ Link to related issue and agenda: https://github.com/dhis2/notes/issues/114
 
 - Re-introduce the proxy. Jira issue: https://jira.dhis2.org/browse/DHIS2-9093
 - Research security risks and (hopefully) implement a pass-through proxy to the App Hub.
-- Security engineer (Moarten S) likely needs to investigate application management security
+- Security engineer (Morten S) likely needs to investigate application management security
     - Verify that the server validates the CA-certificate of App Hub. 
     - Investigate vulnerability surface area of wildcard proxy
     - Other: mitigate risks of MITM attacks of intalled apps with eg. hashes of installed apps
