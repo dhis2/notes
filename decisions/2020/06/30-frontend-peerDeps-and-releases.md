@@ -25,9 +25,8 @@
 
 - Successfully hosted first online DHIS2 application developer workshop last week!
 - 30+ participants from 19 countries
-- Find 
 - Huge thanks to Jan-Gerke, Hendrik, Christos, Milagros, Lars, and Wahed as well as Matthieu, Alice, and Grant for making this possible!
-- Some room for improvement for 
+- Some room for improvement in preparing for the August workshop
 
 ## Proposals
 
