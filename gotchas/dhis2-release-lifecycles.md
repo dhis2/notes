@@ -1,6 +1,6 @@
 # DHIS2 release lifecycles
 
-This is a walk through on the DHIS2  software releases and its lifecycles. Starting off we are gonna communicate some basic concepts in order to build a common language that we will use to better explain the release cycle.
+This is a walk through on the DHIS2  software releases and its lifecycles. Starting off we are going to communicate some basic concepts in order to build a common language that we will use to better explain the release cycle.
 
 
 #### Backend core application 
@@ -14,7 +14,7 @@ To communicate releases the [repository of the backend application](https://gith
 
 DHIS2 implements and maintains different core web applications.  The core web apps also follow a branching convention, however that is slightly different from the one followed in the backend. Same as in the backend the `master` branch includes the latest of the implemented software and is always the next candidate for a major release. However for each released version of the software there is a branch that follows the `v{x}` pattern. Eg. `v35`.  
 
-_Note: There are some core frontend apps that are currently now following this convention. While writing this the exceptions are the [data-visualiser-app](https://github.com/dhis2/data-visualizer-app/) which is using a different convention and [a list of apps](https://github.com/dhis2/dhis2-core/tree/master/dhis-2/dhis-web/dhis-web-apps) where feature toggling is being used._
+_Note: There are some core frontend apps that are currently not following this convention. While writing this the exceptions are the [data-visualiser-app](https://github.com/dhis2/data-visualizer-app/) which is using a different convention and [a list of apps](https://github.com/dhis2/dhis2-core/tree/master/dhis-2/dhis-web/dhis-web-apps) where feature toggling is being used._
 
 
 #### Supported versions
