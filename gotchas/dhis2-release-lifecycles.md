@@ -5,7 +5,7 @@ This is a walk through on the DHIS2  software releases and its lifecycles. Start
 
 #### Backend core application 
 
-The first one is the backend service. The DHIS2 organisation has a single backend service which serves all the different frontend and mobile applications. Among other responsibilities the backend is also responsible for building the backend services and frontend core applications. The output of the build is a `war` file which the end users can download from our [download page](https://www.dhis2.org/downloads). 
+The first one is the backend service. DHIS2 has a single backend service, written in Java, which serves all the different frontend and mobile applications. The  backend service and alll frontend core applications are bundled together at build time. The output of the build is a `WAR` file which the end users can download from our [download page](https://www.dhis2.org/downloads), as well as a [Docker image](https://hub.docker.com/r/dhis2/core).
 
 To communicate releases the [repository of the backend application](https://github.com/dhis2/dhis2-core) follows a branching naming convention. According to this convention the `master` branch includes the latest of the implemented software and is always the next candidate for a major release. For each major released version of the DHIS2 software there is a branch that follows the` 2.{x}` pattern. Eg. `2.35`. 
 
@@ -60,7 +60,7 @@ A patch release scenario is simpler than a major release therefore there is no s
 
 Same as before the  <code>patch/2.35.1</code> branches include the code that will go in the <code>2.35.1</code> release. Patch branches are tested by the QA team and in <em>rare</em> cases code is ported on those.
 
-When the testing is done a release takes place and a new <code>war</code> is being created. These are stable releases and are the ones we announce to the public and we recommend for use in production. They also are the main ones we upload on our [downloads page](https://www.dhis2.org/downloads). 
+When the testing is done a release takes place and a new <code>WAR</code> is being created. These are stable releases and are the ones we announce to the public and we recommend for use in production. They also are the main ones we upload on our [downloads page](https://www.dhis2.org/downloads). 
 
 _A visual representation of a patch release cycle._
 
@@ -68,24 +68,22 @@ _A visual representation of a patch release cycle._
 
 ## Building the `war` file
 
-DHIS2 maintains a separate GitHub organisation, called <code>[d2-ci](https://github.com/d2-ci/)</code>. Every existing core web app repository in the <code>[dhis2](https://github.com/dhis2)</code> GitHub organisation has a repository with the same name in the <code>d2-ci </code>organisation. Eg. [d2-ci/gis-app](https://github.com/d2-ci/gis-app) and [dhis2/gis-app](https://github.com/dhis2/gis-app). In other words, the <code>d2-ci</code> organisation serves the purpose of storing the optimised production ready artifacts of each application that builds successfully. Building and pushing into the <code>d2-ci</code> repo takes place during the CI/CD of each application when either a tag or a commit is pushed. 
+DHIS2 maintains a separate GitHub organisation, called <code>[d2-ci](https://github.com/d2-ci/)</code>. Every existing core web app repository in the <code>[dhis2](https://github.com/dhis2)</code> GitHub organisation has a repository with the same name in the <code>d2-ci </code>organisation. Eg. [d2-ci/dashboards-app](https://github.com/d2-ci/dashboards-app) and [dhis2/dashboards-app](https://github.com/dhis2/dashboards-app). In other words, the <code>d2-ci</code> organisation serves the purpose of storing the optimised production-ready artifacts of each application that builds successfully. Building and pushing into the <code>d2-ci</code> repo takes place during the CI/CD of each application whenever a commit is pushed to the corresponding `dhis2` repository. 
 
-To complete the picture there is one more key concept we need to explain. In the <code>[dhis2-core](https://github.com/dhis2/dhis2-core)</code> there is a JSON file called <code>[apps-to-bundle.json](https://github.com/dhis2/dhis2-core/blob/master/dhis-2/dhis-web/dhis-web-apps/apps-to-bundle.json). </code>As the name suggests, there we capture all the apps the <code>war</code> file will include . There you are also given the option to choose the exact version of the bundle for each app. You do that by specifying either a branch, a tag, or a commit hash. The <code>dhis2-core</code> will then fetch the artifacts from the <code>d2-ci </code>repo during the build time and stitch it together to create the <code>war</code> file. An example of the JSON file with only 4 apps would look like the code below. The example is written in pseudo-JSON. 
+To complete the picture there is one more key concept we need to explain. In the <code>[dhis2-core](https://github.com/dhis2/dhis2-core)</code> there is a JSON file called <code>[apps-to-bundle.json](https://github.com/dhis2/dhis2-core/blob/master/dhis-2/dhis-web/dhis-web-apps/apps-to-bundle.json). </code>As the name suggests, this file captures all the apps the <code>WAR</code> file will include. This JSON file may also optionally specify the exact version of each app to bundle. You do that by specifying either a branch, a tag, or a commit hash. The <code>dhis2-core</code> build will then fetch the artifacts from the <code>d2-ci</code> repo and stitch them together to create the <code>WAR</code> file. An example of the JSON file with only 4 apps would look like the code below. The example is written in pseudo-JSON. 
 
 
 ```javascript
 [
 // it will fetch the latest build from the master branch
-"https://github.com/d2-ci/event-charts-app",
+"https://github.com/d2-ci/data-visualizer-app",
 // it will fetch the latest build from the v32 branch
 "https://github.com/d2-ci/import-export-app#v32",
 // it will fetch the specific commit 
-"https://github.com/d2-ci/gis-app#5afaf70e8b7e427bc064fa025610eea2c0e195e5",
+"https://github.com/d2-ci/maps-app#5afaf70e8b7e427bc064fa025610eea2c0e195e5",
 // it will fetch the build from the tag
 "https://github.com/d2-ci/maintenance-app#2.31.1",
 ]
 ```
-
-
  
-A detailed explanation on the different modules responsible for the release and its underlying mechanisms is described in this [article](https://dhis2.github.io/2019/02/the-build-system/). If you interested in looking into some more practical tips on how to build the dhis2 system then you can read more about it [here](https://dhis2.github.io/2019/03/build-acrobatics/).  
+A detailed explanation on the different modules responsible for the release and its underlying mechanisms is described in this [article](https://dhis2.github.io/2019/02/the-build-system/). If you are interested in looking into some more practical tips on how to build the dhis2 system then you can read more about it [here](https://dhis2.github.io/2019/03/build-acrobatics/).
