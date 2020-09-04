@@ -1,22 +1,71 @@
-# Discussion Board
+# DHIS2 Notes
 
-**NOTE: Way of Work information (`wow-frontend`) is being migrated to the [Developer Portal](https://developers.dhis2.org)**
+In [dhis2/notes](https://github.com/dhis2/notes) you will find:
 
-Please raise an [issue](https://github.com/dhis2/dhis2.github.io/issues) there if something is missing
+- Decisions
+- Meeting minutes
+- Discussions
+- Gotchas
 
-This repository has been renamed to `notes` to serve the purpose of recording decisions and discussions over time.
+Please refer to this decision document about [why we need a structured
+way to capture this
+information](https://github.com/dhis2/notes/blob/master/decisions/2019/01/31-notes-consolidation.md).
 
-## Proposals / Discussion
+The TL;DR is that there are lots of ways to manage these types of
+artifacts, but none are as near the developers as GitHub, and in fact,
+many of the limitations work to our advantage here.
 
-Create an issue in GitHub, it can be discussed in the issue, and then a
-decision taken in a meeting if necessary.
+# Process
 
-## Meeting minutes / Decisions
+## Discussions and Proposals
 
-Create a markdown file with the date `DD.md` as the name, under the
-correct directory `YYYY/MM`.
+Create an issue in GitHub so it can be discussed in the issue, and then a
+[decision](#decision) will be taken in a meeting if necessary.
 
-Raise a PR to get it approved and/or discussed, and finally merged from
-some of the meeting participants.
+The limitations of GitHub Issues work to our advantage here, as there
+are no threads within topics, so each issue MUST only discuss a single
+topic.
 
-See [TEMPLATE.md](TEMPLATE.md).
+If the topic derails or spawns a new side-discussion, that must be moved
+to its own issue.
+
+## Meeting minutes
+
+Any type of minute from an ad-hoc meeting that has a conclusion should
+be added here for posterity,
+
+- stating who was in the meeting,
+- what was disussed, and
+- the conclusion.
+
+This way e.g. two developers can discuss and decide on something
+quickly, and push a PR for the rest of the team to read. If something
+comes up during the PR, then it can be caught and changed before too
+much time has passed.
+
+This allows for two developers to move quickly, while keeping the team
+informed about decisions taken underway that can be reviewed without
+calling a meeting with the entire team.
+
+## Decisions
+
+A discussion should happen on an async basis, which enables everyone to
+contribute at their own schedule and leisure. The team should be
+comfortable with knowing that no decisions "just happen" so they have to
+be reading Slack throughout the entire day.
+
+Instead we trust that if there is a decision as a result of a meeting
+we were not privy to, a PR with the outcome will be available to read
+and comment on before decision is final.
+
+# Structure for minutes and decisions
+
+1. Create a markdown file with the date
+   `DD-{keywords-describing-meeting}.md` as the name, under the correct
+   directory `YYYY/MM`.
+
+2. Raise a PR to get it approved and/or discussed, and finally merged
+   from some of the meeting participants.
+
+If you would like to see an example of how a meeting minute or decision
+document can look, see [TEMPLATE.md](TEMPLATE.md).
