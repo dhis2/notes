@@ -14,4 +14,4 @@ The impact of this change is the following:
 
 * Exporting user metadata through the `/api/metadata` endpoint now requires the `F_USER_VIEW` authority.
 * Accessing the `/api/users` endpoint still requires the `F_USER_VIEW` authority (no change in behavior).
-* User accounts / user roles which are intended for end users, i.e. not user administrators, should no longer include the  `F_USER_VIEW` authority. All apps (except the user management app) now use the user lookup API and no longer requires the `F_USER_VIEW` authority. This applies to the tracker capture app and the messaging app.
+* User roles which are intended for end users, i.e. not user administrators, should no longer include the `F_USER_VIEW` authority. All apps (except the user management app) now use the user lookup API and no longer requires the `F_USER_VIEW` authority. This applies to the tracker capture app and the messaging app.
