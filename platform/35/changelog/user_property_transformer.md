@@ -8,7 +8,7 @@ From 2.35, all endpoints that expose objects that has `user` property will no lo
 ?fields=id,displayName,userGroups[id,firstName,surname, userCredentials[*]]
 ```
 
-Will no longer expose the requested properties, but instead only:
+Will no longer expose all available properties and instead only:
 
 - `id`
 - `code`
