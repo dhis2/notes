@@ -1,4 +1,4 @@
-# 2.35: View user authority changes
+# View user authority changes
 
 In version 2.35, the impact of the existing authority for viewing users called `F_USER_VIEW` has changed.
 
