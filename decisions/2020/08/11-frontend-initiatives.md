@@ -2,7 +2,7 @@
 
 **Attending (speaking)**: Jennifer, Jan-Gerke, Austin, Edoardo, Birk, Martin, Joe, Christos, Milagros, ...
 
-**Next Meeting**: September 30, 2020 @ 15:00 CET
+**Next Meeting**: September 2, 2020 @ 15:00 CET
 
 ## Agenda
 
