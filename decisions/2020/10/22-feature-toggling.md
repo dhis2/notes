@@ -1,7 +1,7 @@
 **Date**: 2020-10-22
 
 **Attending**: Christos, Jan-Gerke, Hendrik, Ismay, Jan Henrik, Edoardo,
-Austin, Viktor, Jennifer, Milagros, Martin, Birk
+Austin, Viktor, Jennifer, Milagros, Martin, Birk, Joakim, Bjørn
 
 ## Agenda
 
@@ -9,6 +9,7 @@ Austin, Viktor, Jennifer, Milagros, Martin, Birk
 
 ## Links
 
+-   [Recording (DHIS2 account required)](https://drive.google.com/file/d/1T3mZkaTrVTLczz9tEFjMpzZoUPlhxaAD/view?usp=drivesdk)
 -   https://github.com/dhis2/app-platform/issues/381
 
 ## Notes
