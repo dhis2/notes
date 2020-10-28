@@ -95,7 +95,7 @@ Next steps:
 -	Keep going as we are for 2 months.
 -	Gather information and use cases we run into.
 -	Integrate our test reports into Zephyr (with and without Cucumber).
--	Refer to #136.
+-	Refer to [#136](https://github.com/dhis2/notes/issues/136).
 	
 ### Migrating d2-ui components, Tech debt review
 
