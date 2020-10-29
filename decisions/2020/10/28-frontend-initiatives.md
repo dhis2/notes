@@ -7,31 +7,31 @@ Jan Henrik,  Jan-Gerke, Joe, Martin, Milagros, Wahed
 
 ## Agenda
 
--	Quick general updates:
+-   Quick general updates:
 
-	-	New unified GitHub workflows for [apps](https://github.com/dhis2/workflows/blob/master/ci/dhis2-verify-app.yml), [libs](https://github.com/dhis2/workflows/blob/master/ci/dhis2-verify-lib.yml), [node](https://github.com/dhis2/workflows/blob/master/ci/dhis2-verify-node.yml)
+    -   New unified GitHub workflows for [apps](https://github.com/dhis2/workflows/blob/master/ci/dhis2-verify-app.yml), [libs](https://github.com/dhis2/workflows/blob/master/ci/dhis2-verify-lib.yml), [node](https://github.com/dhis2/workflows/blob/master/ci/dhis2-verify-node.yml)
 
-	-	Work started on practical plans on GitHub to JIRA migration (#135)
+    -   Work started on practical plans on GitHub to JIRA migration (#135)
 
-- 	Updates from active working groups
+-   Updates from active working groups
 
--	New working group for Feature toggling
+-   New working group for Feature toggling
 
-	-	All teams do an initial check on "known" features to toggle
-	-	Working group extracts use cases and works on a proof-of-concept
-	-	Pilot integration into chosen apps
+    -   All teams do an initial check on "known" features to toggle
+    -   Working group extracts use cases and works on a proof-of-concept
+    -   Pilot integration into chosen apps
 
--	Cypress and Gherkhin - next steps for decision
+-   Cypress and Gherkhin - next steps for decision
 
--	Migrating d2-ui components
+-   Migrating d2-ui components
 
--	Tech debt review
+-   Tech debt review
 
 ## Links
 
 (DHIS2 account required)
 
-*	[Agenda](https://github.com/dhis2/notes/issues/134)
+*   [Agenda](https://github.com/dhis2/notes/issues/134)
 
 ## Notes
 
@@ -43,27 +43,31 @@ Let Viktor know if you are having issues with the unified workflows.
 
 Four working groups in May:
 
-*	_Independent app releases_: good progress
+*   _Independent app releases_: good progress
 
-*	_PWA offline support_: put off to after 2.35
+*   _PWA offline support_: put off to after 2.35
 
-*	_Platform improvements_: main one with progress, converted several apps to
-	the platform, progressive modernization working well, moving away from d2
+*   _Platform improvements_: main one with progress, converted several apps to
+    the platform, progressive modernization working well, moving away from d2
 
-	Some challenges related to d2, and replacing d2-ui components, gradual
-	migration may be possible with the d2 runtime adapter. Hard to replace when
-	using the d2 models.
+    Some challenges related to d2, and replacing d2-ui components, gradual
+    migration may be possible with the d2 runtime adapter. Hard to replace when
+    using the d2 models.
 
-	Testing and automation, more getting involved.
+    There is good progress on testing and test automation, more people
+    are getting involved.
 
-	Porting d2-ui to ui.
+    There is some movement on porting d2-ui components to UI.
 
-	Plugin builds initiative restart, move from mono to single repo, multiple outputs.
+    Plugin builds initiative restart, to enable a move from mono to
+    single repo with multiple outputs.
 
-	i18n, caching, and performance, work has started.
+    i18n, caching, and performance: work has started.
 
-*	_Developer evangelism_: academy in August, went well, some wrap up and clean
-	up, new one coming, looking at a developer advocate position
+*   _Developer evangelism_: academy in August. Went well, some wrap up and clean
+    up to do before the new one coming in early 2021.
+
+    Looking at a hiring for a developer advocate position
 
 ### Feature toggling working group
 
@@ -76,27 +80,27 @@ for specific details or units of work.
 
 Points from discussion:
 
--	The abstraction of Feature files can be nice.
+-   The abstraction of Feature files can be nice.
 
--	Maybe not everything needs to be a Feature file.
+-   Maybe not everything needs to be a Feature file.
 
--	Can we use feature files for some things and not others?
+-   Can we use feature files for some things and not others?
 
--	A limited number of acceptance tests based on feature files, and the rest in vanilla?
+-   A limited number of acceptance tests based on feature files, and the rest in vanilla?
 
--	What is the actual overhead of Cucumber?
+-   What is the actual overhead of Cucumber?
 
--	Push test results to Zephyr.
+-   Push test results to Zephyr.
 
--	All in on vanilla Cypress? All in on Cucumber Cypress? Is a hybrid approach viable?
+-   All in on vanilla Cypress? All in on Cucumber Cypress? Is a hybrid approach viable?
 
 Next steps:
 
--	Keep going as we are for 2 months.
--	Gather information and use cases we run into.
--	Integrate our test reports into Zephyr (with and without Cucumber).
--	Refer to [#136](https://github.com/dhis2/notes/issues/136).
-	
+-   Keep going as we are for 2 months.
+-   Gather information and use cases we run into.
+-   Integrate our test reports into Zephyr (with and without Cucumber).
+-   Refer to [#136](https://github.com/dhis2/notes/issues/136).
+    
 ### Migrating d2-ui components, Tech debt review
 
 We didn't get to these today.
