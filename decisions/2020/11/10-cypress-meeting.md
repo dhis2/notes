@@ -91,5 +91,21 @@ We reached a general consensus on adding new Cypress commands is
 preferable over extending existing Cypress commands, so e.g. our
 `Cy.get` extension would become, e.g. `Cy.getExpand`.
 
+We also agreed on producing a breaking change and providing a codemod to
+automate the migration.
+
 This opens up the option of adding our own `Cy.containsExact` functions
 in `@dhis2/cypress-commands`.
+
+We also discussed the possibility of extending the current `get` /
+`getExpand` with a `getLike` for a "contains match" (rather than an
+"exact match" that the regular `get` provides). With a corresponding
+extension for `find` -> `findLike` as well.
+
+Example 
+
+> getBySelLike yields elements with a data-test attribute that contains
+> a specified selector.
+
+Source:
+https://docs.cypress.io/guides/references/best-practices.html#Real-World-Example
