@@ -5,13 +5,13 @@ Several fixes/bugfixes has been merged into 2.36 for the `/api/schemas` endpoint
 
 | type                                         | property                    | schema change    | old value | new value   |
 | -------------------------------------------- | --------------------------- | ---------------- | --------- | ----------- |
-| `Attribute`                                  | `unique`                    | `required`       | `false`   | `true`      |
-| `Attribute`                                  | `dataElementAttribute`      | `required`       | `true`    | `false`     |
-| `Attribute`                                  | `indicatorAttribute`        | `required`       | `true`    | `false`     |
-| `Attribute`                                  | `organisationUnitAttribute` | `required`       | `true`    | `false`     |
-| `Attribute`                                  | `userAttribute`             | `required`       | `true`    | `false`     |
-| `AttributeValue`                             | `value`                     | `required`       | `false`   | `true`      |
-| `AttributeValue`                             |                             | `embeddedObject` | `false`   | `true`      |
+| `attribute`                                  | `unique`                    | `required`       | `false`   | `true`      |
+| `attribute`                                  | `dataElementAttribute`      | `required`       | `true`    | `false`     |
+| `attribute`                                  | `indicatorAttribute`        | `required`       | `true`    | `false`     |
+| `attribute`                                  | `organisationUnitAttribute` | `required`       | `true`    | `false`     |
+| `attribute`                                  | `userAttribute`             | `required`       | `true`    | `false`     |
+| `attributeValue`                             | `value`                     | `required`       | `false`   | `true`      |
+| `attributeValue`                             |                             | `embeddedObject` | `false`   | `true`      |
 | `objectStyle`                                |                             | `embeddedObject` | `false`   | `true`      |
 | `access`                                     |                             | `embeddedObject` | `false`   | `true`      |
 | `translation`                                |                             | `embeddedObject` | `false`   | `true`      |
