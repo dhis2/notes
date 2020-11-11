@@ -73,7 +73,8 @@ our toolkit for Cypress.
 
 ### Overwriting Cypress functions and Cypress helpers
 
-As long as we attempt to use the order of selectors:
+As long as we attempt to use the [recommended order of
+selectors](https://testing-library.com/docs/guide-which-query/):
 
 0.  label
 0.  placeholder
