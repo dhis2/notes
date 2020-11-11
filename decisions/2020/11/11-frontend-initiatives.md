@@ -73,5 +73,5 @@ Some thoughts of what tech debt means to some of us:
 
 -   Anything that needs to be done, but doesn't show up in JIRA.
 
-**CTA**: Please look through the Tech Debt Topics and add things you are
+**CTA**: Please look through the [Tech Debt Topics](https://docs.google.com/document/d/1q_LDIZcaoGbKQ-gz1SfOJ3Fy-SeYmCn5e7n3GSCTK5Q/edit) and add things you are
 aware of.
