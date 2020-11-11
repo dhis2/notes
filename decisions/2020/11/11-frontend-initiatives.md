@@ -59,6 +59,8 @@ Viktor, Birk, Edoardo, Martin, .. ?
 -   Sharing dialog is in progress, [PR](https://github.com/dhis2/ui/pull/24).
 -   What do we test with Jest, and what do we test with Cypress.
 -   Cypress for high complexity tests, Jest for low complexity.
+-     [Layouts POC](https://github.com/dhis2/ui/pull/27) was drafted a while ago but has gotten stale, need another pass.  This replaces [d2-ui-core layouts](https://github.com/dhis2/d2-ui/tree/master/packages/core/src/layout)
+-    Edoardo is also working on implementing the [d2-ui-file-menu](https://github.com/dhis2/d2-ui/tree/master/packages/file-menu) with UI components in [analytics](https://github.com/dhis2/analytics/pull/655)
 
 ### Tech Debt Review
 
