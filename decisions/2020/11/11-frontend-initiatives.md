@@ -39,7 +39,7 @@ Viktor, Birk, Edoardo, Martin, .. ?
 -   PWA: Progress on specifically the Dashboards PWA.
 -   Platform: Alert Service coming soon.
 -   Platform: Plugin builds, how to add plugin builds to the platform.
--   Feature toggling: Collecting use cases in
+-   Feature toggling: Collecting use cases in [this Notes issue](https://github.com/dhis2/notes/issues/138)
 
 ### Prioritization of library issues
 
