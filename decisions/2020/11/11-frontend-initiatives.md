@@ -49,7 +49,7 @@ Viktor, Birk, Edoardo, Martin, .. ?
     for the project about what work is done, etc.
 
 -   There is a question of visibility of issues in JIRA since a user
-    account is required, how to we reach externals developers, make it
+    account is required, how do we reach externals developers, make it
     searchable, etc.?
 
 ### Migrating d2-ui components
