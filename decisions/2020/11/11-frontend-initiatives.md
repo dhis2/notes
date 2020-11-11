@@ -1,7 +1,7 @@
 **Date**: 2020-11-11
 
 **Attending**: Hendrik, Joakim, Christos, Austin, Jan, Jan-Gerke, Joe,
-Viktor, Birk, Edoardo, .. ?
+Viktor, Birk, Edoardo, Martin, .. ?
 
 **Next Meeting**: Wednesday 25 November, 2020 @ 15:00
 
