@@ -16,6 +16,7 @@ Meeting about this PR https://github.com/dhis2/usage-analytics-app/pull/388 and 
 - Update all dependencies (which would also address the cli style import sorting).
 - See if the state variables in the App.js component could be simplified a bit. There are quite a lot of them currently.
 - Parameter destructuring, should we destructure so it’s explicit, or pass params without destructuring for brevity (no conclusion yet)?
+- Some idiosyncracies that ended up in the refactor could probably have been avoided if multiple people had been involved from the start, like with the sms app refactor. Not much we can do about that now, but good to keep in mind for the future.
 
 ### Address in the PR
 
