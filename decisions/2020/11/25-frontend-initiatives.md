@@ -32,7 +32,7 @@ Austin, Martin, Edoardo, Hendrik, Bjørn
 
 ## Notes
 
--	How do we track full ports beyond step 3?
+-   How do we track full ports beyond step 3?
 
 -   Can we do it automatically?
 
