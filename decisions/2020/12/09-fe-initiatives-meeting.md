@@ -1,6 +1,6 @@
 **Date**: 2020-12-09
 
-**Attending**: Birk, Bjørn, Christos, Hendrik, Ismay, Joe, Martin,
+**Attending**: Birk, Bjørn, Christos, Hendrik, Ismay, Joe, Martin, Austin
 Viktor, Jennifer, Jan Henrik, Joakim, Edoardo, Milagros, Jan-Gerke
 
 **Next Meeting**: January 6, 2020 @ 15:00
