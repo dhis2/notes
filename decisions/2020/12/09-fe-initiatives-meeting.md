@@ -77,7 +77,7 @@ _Where_ : Remote
 
     -   Currently 3 different systems, need to consolidate to one.
 
-    -   Sharing dependencies between the host and the embedded plugins.
+    -   Sharing dependencies between the host and the embedded plugins will come later, but will be considered in the initial design.
 
 ### Yarn2 migration
 
