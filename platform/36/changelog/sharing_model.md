@@ -7,7 +7,7 @@ Current Sharing data model has some disadvantages such as:
 
 - Below is the current sharing model diagram for `DataElement`
 <p align="center">
-<img src="resources/images/dataelement_with_legacy_sharing.png" alt="drawing" width="400"/>
+<img src="resources/images/dataelement_with_legacy_sharing.png" alt="drawing" width="600"/>
 </p>
 
 ## 2. Introducing new Jsonb column
