@@ -41,7 +41,7 @@ Current Sharing model has some disadvantages:
 }
     
 ```
-## 3. Introduce  `owner` property
+## 3. Introducing  `owner` property
 - We introduced a new `owner` property inside `sharing`. This contains UID of the `User` who owns the object. 
 - ACL service will check sharing access using this `owner` property.
 - Object's owner can be changed/transfered to other `User`. The design of the feature still need to be discussed.
