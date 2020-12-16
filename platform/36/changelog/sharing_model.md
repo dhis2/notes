@@ -7,7 +7,7 @@ Current Sharing model has some disadvantages:
 
 - Below is the current sharing model diagram for `DataElement`
 <p align="center">
-<img src="resources/images/dataelement_with_legacy_sharing.png" alt="drawing" width="480" height="150"/>
+<img src="resources/images/dataelement_with_legacy_sharing.png" alt="drawing" width="600" height="200"/>
 </p>
 
 ## 2. Introducing new Jsonb column
@@ -18,37 +18,35 @@ Current Sharing model has some disadvantages:
 
 - Below is the value format of `sharing` column.
 ```
-    {
-        "sharing": {
-            "owner": "GOLswS44mh8",
-            "external": false,
-            "public": "rwrw----",
-            "users": {
-                "xE7jOejl9FI": {
-                    "access": "rw------",
-                    "id": "xE7jOejl9FI"
-                }
-            },
-            "userGroups": {
-                "tH0GcNZZ1vW": {
-                    "access": "rwrw----",
-                    "id": "tH0GcNZZ1vW"
-                },
-                "Rg8wusV7QYi": {
-                    "access": "rw------",
-                    "id": "Rg8wusV7QYi"
-                }
-            }
+{
+    "owner": "GOLswS44mh8",
+    "external": false,
+    "public": "rwrw----",
+    "users": {
+        "xE7jOejl9FI": {
+            "access": "rw------",
+            "id": "xE7jOejl9FI"
+        }
+    },
+    "userGroups": {
+        "tH0GcNZZ1vW": {
+            "access": "rwrw----",
+            "id": "tH0GcNZZ1vW"
+        },
+        "Rg8wusV7QYi": {
+            "access": "rw------",
+            "id": "Rg8wusV7QYi"
         }
     }
+}
+    
 ```
 ## 3. Introduce  `owner` property
 - We introduced a new `owner` property inside `sharing`. This contains UID of the `User` who owns the object. 
-- Current `user` property's name will be changed to `createdBy`. This property is  immutable. 
 - ACL service will check sharing access using this `owner` property.
-- Object's owner can be changed/transfered to other `User`
-
-- Currently the `onwer` value is copied from the `user` for backward compatibility. But this will be changed after we decided on the design of managing features of this property.
+- Object's owner can be changed/transfered to other `User`. The design of the feature still need to be discussed.
+- Currently on saving, the `onwer`property's value is copied from the `user` for backward compatibility. But this will be changed after we decided on the features design of this property.
+- Current `user` property's name will be changed to `createdBy`. This property is  immutable. It means once the object is created, you can change the `owner` but not `createdBy`.
 
 ## 4. Migration
 Added Flyway script
