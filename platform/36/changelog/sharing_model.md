@@ -53,8 +53,8 @@ Added Flyway script
 - Copy all current sharing data to new jsonb column.
 - Delete all legacy tables.
 
-## 5. Effects on current sharing api
-- This change doesn't modify the behavior current `/api/sharing` endpoint. It will work the same as before, consuming same payload format and producing same response.
+## 5. Effects on current `/sharing` api
+- This change doesn't modify the behavior of current `/api/sharing` endpoint. It will work the same as before, consuming same payload format and producing same response.
 - In the backend, all incomming sharing data will be converted to the new format and save to new `sharing` jsonb columns.
 
 ## 6. New `/sharing` Endpoint
