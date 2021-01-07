@@ -83,7 +83,7 @@
       Two things we want to look into is a) we want to be able to enable continuous delivery. b) We want to have the authentication with the backend in place.
 
     - Extra topic 
-      Discussion: Hendrik and Austin will connect with Ulaf regarding the data quality app.
+      Discussion: Hendrik and Austin will connect with Olav regarding the data quality app.
 
 * Updates from active working groups
 
@@ -105,13 +105,16 @@
     - Offline design update from Joe
     
         Discussion: Joe has a design proposal for offline connectivity for mobile and desktop. The concept is there and it is basically ready to be implemented. Mobule version is 90 percent there.
-        There will be an upcoming meeting with Jan, Joe
+        There will be an upcoming meeting with Jan, Joe.
+        The link for the offline design proposal: https://jira.dhis2.org/browse/LIBS-48
 
   - UI & Platform updates - [@ismay](https://github.com/ismay) [@HendrikThePendric](https://github.com/HendrikThePendric) [@cooper-joe](https://github.com/cooper-joe) [@amcgee](https://github.com/amcgee)
 
-    * ui cons 
+    * ui-icons 
 
-      Discussion: are released and people can use it. There is also a strategy for migration that Joe has worked on. There is a breaking change to ui v5, the change is that if you have been using the old icons you want to be careful because the old icons have been removed.
+      Discussion: are released and people can use it. There is also a strategy for migration that Joe has worked on. 
+      _The ui-icons migration strategy is available for dashboards, data visualizer and (soon) maps. Other apps do not have a migration strategy available yet._
+      There is a breaking change to ui v5. The change is that if you have been using the old icons you want to be careful because the old icons have been removed.
       Relevant discussion on slack [link](https://meet.google.com/linkredirect?authuser=1&dest=https%3A%2F%2Fdhis2.slack.com%2Farchives%2FC0BP0RABF%2Fp1607611797449000).
 
     * sharing dialog
