@@ -98,9 +98,7 @@
 
     - Responsive Dashboard
     
-        Discussion: Jan is making progress on the work. Milagros and Jeniffer are the main people working on it.
-        Jeniffer works on the responsivness of the app. This part is in PR. Overall is looking pretty good. 
-        Milagros, is work in progress. Couple of details is left.
+        Discussion: Milagros and Jennifer are the main people working on it and they are making good progress. Overall it's looking pretty good. Couple of details left.
 
     - Offline design update from Joe
     
