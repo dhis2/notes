@@ -10,13 +10,13 @@ Current Sharing model has some disadvantages:
 <img src="resources/images/dataelement_with_legacy_sharing.png" alt="drawing" width="600" height="200"/>
 </p>
 
-## 2. Introducing new Jsonb column
+## 2. Introducing new JSONB column
 - To solve the issue, from `2.36` we are replacing the sharing tables with new `sharing` column. The column data type is `jsonb` type. It contains all the sharing data for an object in json format.
 <p align="center">
 <img src="resources/images/dataelement_with_sharing.png" alt="drawing" width="200" />
 </p>
 
-- Below is the value format of `sharing` column.
+- Below is the value format of `sharing` object.
 
 ```json
 {
