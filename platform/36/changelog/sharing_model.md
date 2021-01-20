@@ -5,7 +5,7 @@ Current Sharing model has some disadvantages:
 - Introduced too many tables in database. Each sharing object has two table `*.useraccesses` and `*.usergroupaccesses`. There are total 96 tables for storing sharing data in DHIS2 database.
 - Querying objects with sharing enabled also required joining those two tables, which is slow.
 
-- Below is the current sharing model diagram for `DataElement`
+- Below is the current sharing model diagram for `DataElement`.
 <p align="center">
 <img src="resources/images/dataelement_with_legacy_sharing.png" alt="drawing" width="600" height="200"/>
 </p>
