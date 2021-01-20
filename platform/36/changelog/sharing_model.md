@@ -17,7 +17,8 @@ Current Sharing model has some disadvantages:
 </p>
 
 - Below is the value format of `sharing` column.
-```
+
+```json
 {
     "owner": "GOLswS44mh8",
     "external": false,
@@ -61,17 +62,18 @@ Added Flyway script
 - For saving `sharing` with new format, send PUT request to `/api/<object>/{uid}/sharing` endpoint.
 
 ` PUT /api/categoryOptions/FbLZS3ueWbQ/sharing`
-```
+
+```json
 {
-  "owner": "GOLswS44mh8",
-  "external": true,
-   "users": {
+    "owner": "GOLswS44mh8",
+    "external": true,
+    "users": {
         "xE7jOejl9FI": {
             "access": "rw------",
             "id": "xE7jOejl9FI"
         }
     },
-  "userGroups": {
+    "userGroups": {
         "tH0GcNZZ1vW": {
             "access": "rwrw----",
             "id": "tH0GcNZZ1vW"
@@ -80,8 +82,8 @@ Added Flyway script
             "access": "rw------",
             "id": "Rg8wusV7QYi"
         }
-  },
-  "public": "rw------"
+    },
+    "public": "rw------"
 }
 ```
 
