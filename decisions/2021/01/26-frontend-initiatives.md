@@ -40,7 +40,8 @@ rolling.
 
 Thanks for the proposal, Christos.
 
-(Crowdsource: help remember what the outcome was? next steps?)
+Outcome: we settled on Netlify.
+Next steps: we need to have` *.netlify.app` in the CORS whitelist of the DHIS2 instances that will be used.
 
 ## How is the JIRA consolidation going?
 
