@@ -67,7 +67,7 @@ Médi-Remi, Milagros
     applications and inject components so it only needs to be updated in
     one place (the shell).
 
--   Full documentation is available here: {insert link to austin's pdf}
+-   Full documentation is available [here](https://www.dropbox.com/s/eum0j1s4mdnc0es/Dynamic%20Modules%20and%20Plugins%20-%20Spec.pdf?dl=0)
 
 -   Demo: https://romantic-morse-3fe5bf.netlify.app
 
