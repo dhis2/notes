@@ -8,6 +8,7 @@ Attending: @dhis2/team-platform
 # Links
 
 -   https://github.com/dhis2/notes/discussions/categories/q-a
+-   https://basecamp.com/guides/group-chat-problems
 
 # Notes
 
