@@ -1,7 +1,7 @@
 **Date**: 2021-02-03
 
 **Attending**: Austin, Birk, Bjørn, Christos, Debora, Edoardo, Hendrik,
-Ismay, Jan Henrik, Ismay, Jan-Gerke, Jennifer, Joakim, Joe, Kai, Martin,
+Ismay, Jan Henrik, Jan-Gerke, Jennifer, Joakim, Joe, Kai, Martin,
 Médi-Remi, Milagros
 
 **Next Meeting**: February 17, 2021 @ 15:00
