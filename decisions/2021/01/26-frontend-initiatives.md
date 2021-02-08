@@ -42,6 +42,7 @@ Thanks for the proposal, Christos.
 
 Outcome: we settled on Netlify.
 Next steps: we need to have` *.netlify.app` in the CORS whitelist of the DHIS2 instances that will be used.
+It was suggested that @paschalidi would create a proof of concept which will build the `standalone` frontend app on `gh-actions` and then push on Netlify the results of the build. This way we will be saving build minutes time on Netlify.
 
 ## How is the JIRA consolidation going?
 
