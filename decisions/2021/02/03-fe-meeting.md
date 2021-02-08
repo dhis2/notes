@@ -53,10 +53,11 @@ Médi-Remi, Milagros
 
     Developer outreach by meetups, inviting external devs to Slack, etc.
 
-    Move forward with Docusaurus v2, try it out in cli-utils-docsite by
-    replacing what we currently have, and see how the "default" render
-    looks, then trying to roll it out to other libraries, see how that
-    goes.
+Move forward with Docusaurus v2 in the following sequence:
+
+1. Replace and evaluate if we can write kind of the documentation we need in developers.dhis2.org.
+2. Figure out a way to dynamically pull in md/mdx files from remote locations at build-/runtime so docs can live in their own repositories.
+3. Evaluate how we can integrate Docusaurus into `cli-utils-docsite`, replacing `Docsify` and consolidating on one tool.
 
 ## Dynamic runtime modules
 
