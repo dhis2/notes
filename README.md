@@ -4,7 +4,7 @@ In [dhis2/notes](https://github.com/dhis2/notes) you will find:
 
 - Decisions
 - Meeting minutes
-- Discussions
+- [Discussions](https://github.com/dhis2/notes/discussions)
 - Gotchas
 
 Please refer to this decision document about [why we need a structured
