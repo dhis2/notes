@@ -53,3 +53,23 @@ link to recipes, etc. using a light-weight process.
 
 Starting today we will start our rotation of who is answering questions
 that day.
+
+# Guidance on what to do when on-duty
+
+The "on-duty" day is a day that can basically optimized for shallow
+work that is easy to jump in and out of when needed, as opposed to
+the other days that should be easier to optimize for deep work.
+
+## Chores
+
+A non-exhaustive list of suggestions that are suitable for on-duty days:
+
+-   respond to support requests,
+-   funnel questions to the right forum (usually notes/discussions),
+-   find answers for questions,
+-   provide guidance on what to report and where,
+-   work on bug fixes that are reasonable in scope,
+-   add answers to questions to the appropriate docs,
+-   update dependencies,
+-   other small chores that we never get time for otherwise,
+-   ...
