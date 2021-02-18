@@ -14,7 +14,7 @@ Next Meeting: Tuesday, March 2, 2021 @ 15:00
 - Add network shim to apps that already use cypress (utils?) so we can run tests on GH (@Mohammer5)
 - Start a discussion about component accessibility in @dhis2/ui (@paschalidi)
 - PR previews short demo on the solution (@paschalidi)
-- styled-jsx bug in 3.4.x
+- styled-jsx bug in ~3.4.x~ 3.3.3 (not yet fixed in 3.4.x)
 
 ### Questions
 - When will we be able to deploy independently applications? @paschalidi
@@ -68,4 +68,4 @@ Next Meeting: Tuesday, March 2, 2021 @ 15:00
     *  “accessibility” - don’t stop the browser from doing what it wants to do
 * PR Previews - to discuss next week
 * When will we be able to independently deploy applications? - to discuss next week
-* Styled JSX - there is [a bug in 3.4.x](https://github.com/vercel/styled-jsx/issues/695) which might bite you, be aware
+* Styled JSX - there is [a bug in 3.3.3 (not yet fixed in 3.4.x)](https://github.com/vercel/styled-jsx/issues/695) which affects the `styled-jsx/babel` plugin.  This might might bite you, be aware - @austin will pin the version in @dhis2/cli-app-scripts to 3.3.2 to hopefully avoid this in most cases
