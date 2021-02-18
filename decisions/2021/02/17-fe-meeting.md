@@ -29,7 +29,7 @@ Next Meeting: Tuesday, March 2, 2021 @ 15:00
 * PWA/Offline/Responsive
     * PWA deferred to after 2.36
         * Beta on App Hub in Q1 2021
-* Responsive Working on control bar + portrait / tablet
+    * Responsive Working on control bar + portrait / tablet
 * UI + Platform
     * We want to upgrade shell to ui v6
     * Less of an issue in dynamic module world
