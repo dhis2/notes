@@ -101,6 +101,7 @@ headerbar to the "main" application.
 Feel free to join the rotation!
 
 To see who is on rotation: https://calendar.google.com/calendar/embed?src=c_aebpolkmfvanjcfgf8f96bnbi8%40group.calendar.google.com&ctz=Europe%2FOslo
+Information on how the rota works and what to do: https://github.com/dhis2/notes/blob/master/decisions/2021/02/02-team-platform-rota.md
 
 #### Anything else?
 
