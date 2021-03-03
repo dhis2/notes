@@ -67,7 +67,13 @@ Using a GitHub Action to build and publish a built artifact to Netlify.
 The artifact is then pushed to Netlify and added to the PR as a
 deployment.
 
-Surge is an alternative to Netlify when it comes to PR previews.
+[Surge](https://surge.sh) is an alternative to [Netlify](https://netlify.com) when it comes to PR previews.
+
+Next steps:
+- @paschalidi will put together a short document comparing Surge, Netlfiy, and [Vercel (formerly Zeit Now)](https://vercel.com/)
+- We need to set up debug.dhis2.org-only CORS configuration (@Philip-Larsen-Donnelly)
+- @varl is taking a look at the actions in Christos' demo repo
+- Once we have a reproducible workflow, we can just copy it to our app repos!
 
 #### When will we be able to deploy independent applications on App Hub?
 
