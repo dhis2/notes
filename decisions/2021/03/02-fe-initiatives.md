@@ -106,7 +106,7 @@ To see who is on rotation: https://calendar.google.com/calendar/embed?src=c_aebp
 
 ##### Gather town
 
-There's a DHIS2 Virtual Office -- enlist now!
+There's a [DHIS2 Virtual Office](https://gather.town/app/mg6eoxSuw4vt1tvs/dhis2-virtual-office) -- enlist now!
 
 ##### Dynamic modules demo
 
