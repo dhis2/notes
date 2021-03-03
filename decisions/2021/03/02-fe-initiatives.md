@@ -78,9 +78,8 @@ and the developer workflows.
 
 #### a11y updates
 
-When writing integration tests for the Scheduler app a lib that forces
-use of accessible selectors, this triggered a lot of changes to UI
-components.
+When writing integration tests for the Scheduler app using [cypress testing library](https://testing-library.com/docs/cypress-testing-library/intro/), which forces
+use of accessible selectors, this triggered a lot of changes to UI components.
 
 Base a11y target, there is a proposal for it:
 https://github.com/dhis2/notes/discussions/238
@@ -119,4 +118,3 @@ Better caching of shared resources.
 
 Working on integration into the app platform build scripts, it's there
 but needs some polish before prime time.
-
