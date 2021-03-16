@@ -17,7 +17,7 @@ Médi-Rémi, Debora, Kai, Edoardo, Viktor
 -   Changes to the UI in the dashboard
     Sync status, online/offline
 
-**Task Force**: Jennifer, Médi-Rémi, Austin, (Jan Henrik)
+**Task Force**: Jennifer, Médi-Rémi, Austin, (Jan Henrik), Kai
 
 #### App Runtime - field & paging warnings
 
