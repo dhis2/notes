@@ -1,7 +1,7 @@
 Date: 2021-03-02
 
 Attending: Austin, Birk, Christos, Hendrik, Ismay, Jennifer, Martin,
-Médi-Rémi, Debora, Kai, Edoardo, Viktor
+Médi-Rémi, Debora, Kai, Edoardo, Viktor, Jan-Gerke
 
 ## Notes
 
