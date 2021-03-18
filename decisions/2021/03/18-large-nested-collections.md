@@ -37,3 +37,4 @@ Decision:
 
 -   Morten looks JSON Patch
 -   Jan looks into the API
+-   New meeting in a few weeks
