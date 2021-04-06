@@ -21,7 +21,7 @@ Jan check with Joe on UI status for Dashboard & Headerbar
 Final release in 2.37?
 
 ## TODO
-- Everyone take a look at the specs, see what you think is missing, see if you agree these goal deadlines are feasible
+- Everyone take a look at the [specs](https://docs.google.com/document/d/1uaftvVvZdDppTXFCRXF19WaS9NKVq0BG8dus_mRe_w0/edit), see what you think is missing, see if you agree these goal deadlines are feasible
 - JIRA cleanup and expansion
 - Platform team take a look at designing a first pass at offline caching API design
 
