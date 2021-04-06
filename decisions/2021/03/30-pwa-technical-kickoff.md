@@ -10,7 +10,7 @@ Jan check with Joe on UI status for Dashboard & Headerbar
 
 ## Notes
 - Austin to convene Platform PWA/offline group this week, come up with design spec
-    - Austin - create smaller, more targeted Jira issues and like to big one
+    - Austin - create smaller, more targeted Jira issues and like to [big one](https://jira.dhis2.org/browse/DHIS2-8341)
 - Jan and Analytics team design against spec for 3 weeks
 - Meeting next week to discuss implementation plan (14h 2021-04-08)
 - Platform implements spec for 3 weeks
