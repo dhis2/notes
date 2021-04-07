@@ -23,12 +23,13 @@ Solution needs to scalable on backend/frontend.
     -   Nice interface between frontend and backend
 
 -   Collections API works well, but updating the main object without
-    sending along the entire nested collection.
+    sending along the entire nested collection is not possible.
 
 -   Separating requests leads to consistency issues.
     -   Worried about consistency for updating (single api call)
     -   Not worried about it for reading data (multiple api calls)
 
+> Note: in the past users found it confusing to manage an object and its nested collection separately, so this will need UX consideration.
 Design doc:
 
 -   https://docs.google.com/document/d/1qyAHE1VNqbljpXVYmO6fND6L-cq7_QiZlC5tDN0GAAQ/edit#
