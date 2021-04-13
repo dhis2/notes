@@ -71,7 +71,7 @@ Collaborators needed, please reach out to Debora if you would like to
 present.
 
 If you don't want to present, you can help by producing guides for the
-developers.dhis2.org site.
+developers.dhis2.org site. Check this [document](https://docs.google.com/document/d/1-QfPhG80_EVSN1X6z4CTjYeTo2fbTEt3tgNNnPPvBjo/edit?usp=sharing) to get an idea of what kind of content to write/add. 
 
 ### PR Previews
 
