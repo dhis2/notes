@@ -100,5 +100,5 @@ Backend is working on:
 
 #### cli-utils-docsite
 
-Feature in docsite to use react-docgen.
+Feature in docsite to use react-docgen, will keep parallel `jsdoc` support for non-React documentation.
   
