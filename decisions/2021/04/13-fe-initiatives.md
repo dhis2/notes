@@ -96,9 +96,45 @@ Backend is working on:
     doesn't return all the nested collections. Will contain a suite of
     queries and selectors to help when asking for data.
 
+From the Frontend side:
+
+-	The current view is that our users expect an "atomic-update-UI" for editing
+	objects. With this we mean that all fields, including the nested collection
+	inputs on one form and the users edits everything in one go.
+
+-	This viewpoint is based on historical user feedback from times where we did
+	in fact have a separate UI section for managing these nested collections
+	managed separately, and this was not appreciated.
+
+-	However, we all agreed that we should probably not assume this viewpoint is
+	necessarily still correct. There could have been issues with the old UI that
+	would have been solved easily. And also, given the fact that our current input
+	components aren't really suitable for the new way of managing nested
+	collections, we don't know what our "atomic-UI" would look like.
+
+We should:
+
+1.	Implement a UI design for both "atomic updates" and "separate nested
+	collection management sections".
+
+2.	If not too much work, implement a POC for both (the user-app is a good app
+	to do this in)
+
+3.	Get user feedback, preferably after interqacting with our POCs, but
+	alternatively we could also just discuss the designs with them
+
+Relevant meeting minutes:
+https://github.com/dhis2/notes/blob/master/decisions/2021/03/18-large-nested-collections.md
+
 ### Others?
+
+#### cli-style updates
+
+Check out the `@dhis2/cli-style@alpha` release and see what has changed
+(spoiler: a lot!)
 
 #### cli-utils-docsite
 
-Feature in docsite to use react-docgen, will keep parallel `jsdoc` support for non-React documentation.
+Feature in docsite to use react-docgen, will keep parallel `jsdoc` support for
+non-React documentation.
   
