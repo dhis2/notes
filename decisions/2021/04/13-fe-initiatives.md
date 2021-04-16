@@ -31,18 +31,19 @@ Guidelines:
 
 Rules:
 
-1. Routes live under `src/pages`
-2. Components live under `src/components` and must only contain JSX
-   files
+1. Routes live under `src/pages`, one React component file per route
+2. Components live under `src/components` and should contain React components
+3. React components (JSX) are NOT allowed in any other directories,
+    which should contain business logic and utilities.
 
-Conclusion is that the 5 guidelines above and the 1 rule is adopted, and will be written up
+Conclusion is that the 5 guidelines above and the 3 rules are adopted, and will be written up
 and documented.
 
 ## Task Forces & Updates
 
 ### PWA / Offline Caching
 
-Platform side is working on recording network calls, start and stopping.
+Platform side is working on recording network calls, start and stopping. [spec](https://docs.google.com/document/d/1uaftvVvZdDppTXFCRXF19WaS9NKVq0BG8dus_mRe_w0/edit#heading=h.jd28kwz1a5xn)
 
 Analytics side is focusing on the dashboard app and aligning with the
 API that the platform will provide and what should be cached, and what
@@ -82,9 +83,9 @@ Next step is to whitelist the PR urls, and setup the actions.
 ### Large collections APIs
 
 Now that Platform is used for national installations with COVID
-vaccinations we are hitting restrictions in terms of option sets with
-tens of thousands of options, that are difficult to manage given
-restrictions in the API.
+vaccinations we are hitting restrictions in terms of collections 
+(and particularly nested collections) with tens of thousands of 
+children, that are difficult to manage given restrictions in the API.
 
 Backend is working on:
 
