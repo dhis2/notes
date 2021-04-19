@@ -1,7 +1,14 @@
+Who: Austin, Joe, Médi, Birk, Debora, Phil, Scott
+When: 2021-04-19 11:00 CET
+
+## Agenda
+
+Follow-up on [last meeting action items](https://github.com/dhis2/notes/blob/master/decisions/2021/04/12-app-hub-meeting.md)
+
 ## Notes
 
 - Added Source Code requirement to guidelines [here](https://github.com/dhis2/developer-portal/pull/13)
-  - Need to also add guidelines for forks
+  - **TASK** (Austin, Debora, Phil): Also add guidelines for forks
 - User issue [proposal](https://github.com/dhis2/notes/discussions/260) created by Birk
   - Some feedback but seems general consensus so far
   - Why do we need a user email?
