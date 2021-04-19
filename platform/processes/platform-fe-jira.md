@@ -185,10 +185,9 @@ maintainable!) way.
 All other filters are constructed using this principle.
 
 -   [PFE Backlog: Planned (2.36)](https://jira.dhis2.org/issues/?filter=12025) is based on:
-    -   [PFE Backlog: Planned](https://jira.dhis2.org/issues/?filter=11202) which is based on:
-        -   [PFE Issues](https://jira.dhis2.org/issues/?filter=11061)
-            that further filters:
-                -   [PFE Components](https://jira.dhis2.org/issues/?filter=10841)
+-   [PFE Backlog: Planned](https://jira.dhis2.org/issues/?filter=11202) which is based on:
+-   [PFE Issues](https://jira.dhis2.org/issues/?filter=11061) that further filters:
+-   [PFE Components](https://jira.dhis2.org/issues/?filter=10841)
 
 ### Gotchas
 
