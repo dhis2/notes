@@ -68,4 +68,4 @@ and comment on before decision is final.
    from some of the meeting participants.
 
 If you would like to see an example of how a meeting minute or decision
-document can look, see [TEMPLATE.md](TEMPLATE.md).
+document can look, see [TEMPLATE_MINUTES.md](TEMPLATE_MINUTES.md).
