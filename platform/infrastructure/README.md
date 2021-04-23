@@ -46,7 +46,8 @@ On one side we have environments such as dev and production which are important 
 The implementation should support multiple environments. Although we'll probably only run one production environment it's crucial that we're able to spin up an exact copy for the sake of development and testing.
 
 #### Projects
-Ideally each project should define its own infrastructure but initially a monolithic approach could be used.
+Ideally each project should define its own infrastructure but initially a monolithic approach could be used.  
+[Mono repo vs Multi repos debate](https://www.hashicorp.com/blog/terraform-mono-repo-vs-multi-repo-the-great-debate)
 
 #### Shared functionality
 Shared functionality should be implemented centrally as modules and shared across environments or projects.
