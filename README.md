@@ -2,18 +2,18 @@
 
 In [dhis2/notes](https://github.com/dhis2/notes) you will find:
 
-- Decisions
-- Meeting minutes
-- [Discussions](https://github.com/dhis2/notes/discussions)
-- Gotchas
+-   Decisions
+-   Meeting minutes
+-   [Discussions](https://github.com/dhis2/notes/discussions)
+    -   [Gotchas](https://github.com/dhis2/notes/discussions/categories/gotchas)
+    -   [Agendas](https://github.com/dhis2/notes/discussions/categories/meetings)
+    -   [Q&A](https://github.com/dhis2/notes/discussions/categories/q-a)
+    -   [Specs and RFCs](https://github.com/dhis2/notes/discussions/categories/specs-rfcs)
 
-Please refer to this decision document about [why we need a structured
-way to capture this
-information](https://github.com/dhis2/notes/blob/master/decisions/2019/01/31-notes-consolidation.md).
+Templates:
 
-The TL;DR is that there are lots of ways to manage these types of
-artifacts, but none are as near the developers as GitHub, and in fact,
-many of the limitations work to our advantage here.
+-   [Agendas](https://github.com/dhis2/notes/blob/master/TEMPLATE_AGENDA.md)
+-   [Minutes](https://github.com/dhis2/notes/blob/master/TEMPLATE_MINUTES.md)
 
 # Process
 
@@ -68,4 +68,4 @@ and comment on before decision is final.
    from some of the meeting participants.
 
 If you would like to see an example of how a meeting minute or decision
-document can look, see [TEMPLATE.md](TEMPLATE.md).
+document can look, see [TEMPLATE_MINUTES.md](TEMPLATE_MINUTES.md).
