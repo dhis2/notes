@@ -65,10 +65,12 @@ Initially we should keep everything in one repository and if that grows out of h
 
 ???Every resource should have a postfix to its name indicating which environment it belongs to.
 
+```
 /modules/{network,users,storage}/{main.tf,vars.tf,output.tf}
 /platform/{main.tf,vars.tf,output.tf}
 /apps/cache-cleaner/{main.tf,vars.tf,output.tf}
 /apps/other-app/{main.tf,vars.tf,output.tf}
+```
 
 ### modules
 Should contain our cross app/environment functionality used by multiple projects.
