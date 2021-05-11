@@ -1,6 +1,6 @@
 # Frontend Initiatives Meeting
 
-**When**: May 11, 2021
+**When**: May 11, 2021 15:00 CET
 **Who**: Austin, Birk, Bjørn, Debora, Edoardo, Hendrik, Ismay, Jan, Jan-Gerke, Jasmine, Jennifer, Joe, Kai, Martin, Médi, Simona, Viktor
 
 ## Agenda
