@@ -81,9 +81,8 @@ https://github.com/dhis2/notes/discussions/283
   * Will try to script this to add to all app repos :muscle:
 * GOTCHAS
   * Inconsistent handling of field names - short for GET, long for POST
-    * i.e. new DataValues API
+    * i.e. [new DataValues API](https://docs.dhis2.org/en/develop/using-the-api/dhis-core-version-236/data-validation.html#request-query-parameters)
     * To bring up 
 * App Developer Academy
   * Completed last week, thanks to Debora, Kai, Médi, Jan-Gerke, and Hendrik!
   * Looking for ways to increase attendance and engagement 
-
