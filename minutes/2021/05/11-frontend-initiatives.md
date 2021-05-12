@@ -37,6 +37,10 @@ https://github.com/dhis2/notes/discussions/283
   * External PRs (including dependabot) cannot access secrets
   * For small Cypress test suites, could be run parallel (no API Key needed)
   * For forks there is an option to manually "trust" PRs ([GH blog](https://github.blog/2021-04-22-github-actions-update-helping-maintainers-combat-bad-actors/)) _but this doesn't grant access to secrets_
+    * For context see [the github docs](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks)
+    * Although workflows from forks do not have access to sensitive data such as secrets, they can be an annoyance for maintainers if they are modified for abusive purposes. To help prevent this, workflows on pull requests are not run automatically if they are received from first-time contributors, and must be approved first.
+
+Basically GH blocks all workflows from running on PRs by first-time contributors. A manual approval button will be shown, which will allow the workflows to run (but still without secrets).
 * New cli-style version
   * Run `d2-style check`, no need to run separately for `js` and `text` etc.
   * If there are any problems, open them in Jira CLI project / GH Notes Q&A / #d2 slack channel
