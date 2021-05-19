@@ -20,11 +20,11 @@ Who: ismay, austin, viktor, médi, kai, hendrik, jan-gerke
 
 -   Component packages ([see ui/reorg](https://github.com/dhis2/ui/tree/reorg/components))
 -   Monolith packages ([see old ui/1.0.0-beta](https://github.com/dhis2/ui-core/tree/de5584950e9b7827a24d7611c7f0984d5aa366cd/src))
--   Hybrid packages
-    a.  core + separate widgets ([see d2-ui](https://github.com/dhis2/d2-ui/tree/master/packages))
-    b.  separate core + widgets
-    c.  elements + composes ([see rejected proposal](https://github.com/dhis2/ui/pull/549))
-    d.  core + widgets ([see master](https://github.com/dhis2/ui))
+-   Hybrid packages \
+    a.  core + separate widgets ([see d2-ui](https://github.com/dhis2/d2-ui/tree/master/packages)) \
+    b.  separate core + widgets \
+    c.  elements + composes ([see rejected proposal](https://github.com/dhis2/ui/pull/549)) \
+    d.  core + widgets ([see master](https://github.com/dhis2/ui)) \
 
 ## Reservations against proposal (component packages)
 
