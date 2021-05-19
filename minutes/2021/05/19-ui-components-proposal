@@ -13,7 +13,8 @@ Who: ismay, austin, viktor, médi, kai, hendrik, jan-gerke
 
     -   Eliminate uncertainty about where components live
     -   Good experience when working on the library itself
-    -   Flexibility in terms of extensions, and package/component composition.
+    -   Flexibility in terms of extensions, and package/component composition
+    -   Internal restructure to facilitate work: no breaking changes
 
 ## Potential solutions
 
@@ -23,6 +24,7 @@ Who: ismay, austin, viktor, médi, kai, hendrik, jan-gerke
         a.  core + separate widgets ([see d2-ui](https://github.com/dhis2/d2-ui/tree/master/packages))
         b.  separate core + widgets
         c.  elements + composes ([see rejected proposal](https://github.com/dhis2/ui/pull/549))
+        d.  core + widgets ([see master](https://github.com/dhis2/ui))
 
 ## Reservations against proposal (component packages)
 
