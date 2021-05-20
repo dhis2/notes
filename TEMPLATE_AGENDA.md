@@ -1,4 +1,4 @@
-When: {Month} {Date}, {Year} @ {Time} CET
+When: {Month} {Date}, {Year} @ {Time} CET \
 Where: {Location}
 
 # Agenda
