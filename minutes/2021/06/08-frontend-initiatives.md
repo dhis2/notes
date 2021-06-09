@@ -65,7 +65,7 @@ Edoardo, Hendrik, Ismay, Jan-Gerke, Jennifer, Kai, Martin, Médi, Simona, Viktor
   * Temporary solution exists using chrome flags until version 94
   * Chrome Version 94 will remove that feature and replace it with token based
     auth
-  * Needs to be tracked in Jira
+  * Jira issue: https://jira.dhis2.org/browse/DHIS2-11311 
   * Alternative:
     * Use a local instance (running it on the localhost or have them on the
       same machine)
