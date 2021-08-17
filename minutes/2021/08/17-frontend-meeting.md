@@ -40,6 +40,7 @@
 -   Client-side caching
 
     -   Merged to app-runtime @beta
+    -   Need to discuss necessity of cutting this as a breaking change with @ismay
 
 -   Developer Advocacy
 
