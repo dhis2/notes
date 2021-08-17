@@ -41,6 +41,7 @@
 
     -   Merged to app-runtime @beta
     -   Need to discuss necessity of cutting this as a breaking change with @ismay
+        Context: https://dhis2.slack.com/archives/CLJSVA1RV/p1628781376029800
 
 -   Developer Advocacy
 
