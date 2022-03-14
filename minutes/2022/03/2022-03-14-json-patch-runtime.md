@@ -1,6 +1,6 @@
 # JSON Patch support in App Runtime
 
-Attending: Austin, Médi-Rémi, Austin
+Attending: Austin, Médi-Rémi, Viktor
 
 Proposal and reference for discussion: https://github.com/dhis2/app-runtime/pull/1023
 
