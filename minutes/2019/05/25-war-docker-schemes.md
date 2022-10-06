@@ -1,5 +1,7 @@
 # Name scheme for `WAR`-files and Docker images
 
+> **This scheme is now maintained here!**:https://github.com/dhis2/operations-handbook/blob/master/releases/war_docker_schemes.md
+
 ## `WAR`-file
 
 #### Stable
